@@ -8779,19 +8779,23 @@
       "stops":[
          {
             "stop":"Rotterdam Central",
-            "time":"05:22:00"
+            "time":"05:22:00",
+            "realtime": "05:19:00" 
          },
          {
             "stop":"Schiedam Central",
-            "time":"05:26:00"
+            "time":"05:26:00",
+             "realtime": "05:23:00" 
          },
          {
             "stop":"Delft",
-            "time":"05:34:00"
+            "time":"05:34:00",
+            "realtime": "05:31:00" 
          },
          {
             "stop":"Den Haag HS",
-            "time":"05:43:00"
+            "time":"05:43:00",
+            "realtime": "05:40:00"
          }
       ]
    },
