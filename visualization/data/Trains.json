@@ -4,35 +4,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"04:38:00"
+                "time":"04:38:00",
+                "realtime":"04:39:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"04:40:00"
+                "time":"04:40:00",
+                "realtime":"04:40:00"
             },
             {
                 "stop":"SLUB",
-                "time":"04:41:00"
+                "time":"04:41:00",
+                "realtime":"04:41:00"
             },
             {
                 "stop":"Delft",
-                "time":"04:42:00"
+                "time":"04:42:00",
+                "realtime":"04:41:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"04:43:00"
+                "time":"04:43:00",
+                "realtime":"04:42:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"04:44:00"
+                "time":"04:44:00",
+                "realtime":"04:43:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"04:45:00"
+                "time":"04:45:00",
+                "realtime":"04:44:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"04:47:00"
+                "time":"04:47:00",
+                "realtime":"04:47:00"
             }
         ]
     },
@@ -41,35 +49,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"05:08:00"
+                "time":"05:08:00",
+                "realtime":"05:06:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"05:10:00"
+                "time":"05:10:00",
+                "realtime":"05:08:00"
             },
             {
                 "stop":"SLUB",
-                "time":"05:11:00"
+                "time":"05:11:00",
+                "realtime":"05:09:00"
             },
             {
                 "stop":"Delft",
-                "time":"05:12:00"
+                "time":"05:12:00",
+                "realtime":"05:10:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"05:13:00"
+                "time":"05:13:00",
+                "realtime":"05:11:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"05:14:00"
+                "time":"05:14:00",
+                "realtime":"05:12:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"05:15:00"
+                "time":"05:15:00",
+                "realtime":"05:13:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"05:17:00"
+                "time":"05:17:00",
+                "realtime":"05:16:00"
             }
         ]
     },
@@ -78,35 +94,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"05:31:00"
+                "time":"05:31:00",
+                "realtime":"05:30:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"05:33:00"
+                "time":"05:33:00",
+                "realtime":"05:32:00"
             },
             {
                 "stop":"SLUB",
-                "time":"05:34:00"
+                "time":"05:34:00",
+                "realtime":"05:34:00"
             },
             {
                 "stop":"Delft",
-                "time":"05:35:00"
+                "time":"05:35:00",
+                "realtime":"05:35:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"05:36:00"
+                "time":"05:36:00",
+                "realtime":"05:36:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"05:37:00"
+                "time":"05:37:00",
+                "realtime":"05:37:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"05:38:00"
+                "time":"05:38:00",
+                "realtime":"05:38:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"05:40:00"
+                "time":"05:40:00",
+                "realtime":"05:40:00"
             }
         ]
     },
@@ -115,35 +139,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"05:41:00"
+                "time":"05:41:00",
+                "realtime":"05:41:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"05:43:00"
+                "time":"05:43:00",
+                "realtime":"05:43:00"
             },
             {
                 "stop":"SLUB",
-                "time":"05:44:00"
+                "time":"05:44:00",
+                "realtime":"05:44:00"
             },
             {
                 "stop":"Delft",
-                "time":"05:45:00"
+                "time":"05:45:00",
+                "realtime":"05:45:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"05:46:00"
+                "time":"05:46:00",
+                "realtime":"05:46:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"05:47:00"
+                "time":"05:47:00",
+                "realtime":"05:47:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"05:48:00"
+                "time":"05:48:00",
+                "realtime":"05:48:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"05:50:00"
+                "time":"05:50:00",
+                "realtime":"05:49:00"
             }
         ]
     },
@@ -152,35 +184,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"05:51:00"
+                "time":"05:51:00",
+                "realtime":"05:50:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"05:53:00"
+                "time":"05:53:00",
+                "realtime":"05:52:00"
             },
             {
                 "stop":"SLUB",
-                "time":"05:54:00"
+                "time":"05:54:00",
+                "realtime":"05:54:00"
             },
             {
                 "stop":"Delft",
-                "time":"05:55:00"
+                "time":"05:55:00",
+                "realtime":"05:55:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"05:56:00"
+                "time":"05:56:00",
+                "realtime":"05:56:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"05:57:00"
+                "time":"05:57:00",
+                "realtime":"05:57:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"05:58:00"
+                "time":"05:58:00",
+                "realtime":"05:58:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"06:00:00"
+                "time":"06:00:00",
+                "realtime":"06:01:00"
             }
         ]
     },
@@ -189,35 +229,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"06:01:00"
+                "time":"06:01:00",
+                "realtime":"06:01:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"06:03:00"
+                "time":"06:03:00",
+                "realtime":"06:03:00"
             },
             {
                 "stop":"SLUB",
-                "time":"06:04:00"
+                "time":"06:04:00",
+                "realtime":"06:04:00"
             },
             {
                 "stop":"Delft",
-                "time":"06:05:00"
+                "time":"06:05:00",
+                "realtime":"06:05:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"06:06:00"
+                "time":"06:06:00",
+                "realtime":"06:06:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"06:07:00"
+                "time":"06:07:00",
+                "realtime":"06:07:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"06:08:00"
+                "time":"06:08:00",
+                "realtime":"06:08:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"06:10:00"
+                "time":"06:10:00",
+                "realtime":"06:10:00"
             }
         ]
     },
@@ -226,35 +274,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"06:12:00"
+                "time":"06:12:00",
+                "realtime":"06:11:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"06:14:00"
+                "time":"06:14:00",
+                "realtime":"06:13:00"
             },
             {
                 "stop":"SLUB",
-                "time":"06:15:00"
+                "time":"06:15:00",
+                "realtime":"06:14:00"
             },
             {
                 "stop":"Delft",
+                "time":"06:16:00",
                 "time":"06:16:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"06:17:00"
+                "time":"06:17:00",
+                "realtime":"06:17:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"06:18:00"
+                "time":"06:18:00",
+                "realtime":"06:18:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"06:19:00"
+                "time":"06:19:00",
+                "realtime":"06:19:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"06:21:00"
+                "time":"06:21:00",
+                "realtime":"06:21:00"
             }
         ]
     },
@@ -263,35 +319,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"06:18:00"
+                "time":"06:18:00",
+                "realtime":"06:18:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"06:20:00"
+                "time":"06:20:00",
+                "realtime":"06:20:00"
             },
             {
                 "stop":"SLUB",
-                "time":"06:21:00"
+                "time":"06:21:00",
+                "realtime":"06:21:00"
             },
             {
                 "stop":"Delft",
-                "time":"06:22:00"
+                "time":"06:22:00",
+                "time":"06:21:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"06:24:00"
+                "time":"06:24:00",
+                "realtime":"06:24:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"06:25:00"
+                "time":"06:25:00",
+                "realtime":"06:25:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"06:26:00"
+                "time":"06:26:00",
+                "realtime":"06:26:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"06:28:00"
+                "time":"06:28:00",
+                "realtime":"06:28:00"
             }
         ]
     },
@@ -300,35 +364,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"06:25:00"
+                "time":"06:25:00",
+                "realtime":"06:25:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"06:27:00"
+                "time":"06:27:00",
+                "realtime":"06:27:00"
             },
             {
                 "stop":"SLUB",
-                "time":"06:28:00"
+                "time":"06:28:00",
+                "realtime":"06:28:00"
             },
             {
                 "stop":"Delft",
-                "time":"06:29:00"
+                "time":"06:29:00",
+                "realtime":"06:29:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"06:31:00"
+                "time":"06:31:00",
+                "realtime":"06:32:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"06:33:00"
+                "time":"06:33:00",
+                "realtime":"06:33:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"06:34:00"
+                "time":"06:34:00",
+                "realtime":"06:34:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"06:36:00"
+                "time":"06:36:00",
+                "realtime":"06:36:00"
             }
         ]
     },
@@ -337,35 +409,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"06:35:00"
+                "time":"06:35:00",
+                "realtime":"06:36:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"06:37:00"
+                "time":"06:37:00",
+                "realtime":"06:37:00"
             },
             {
                 "stop":"SLUB",
-                "time":"06:38:00"
+                "time":"06:38:00",
+                "realtime":"06:38:00"
             },
             {
                 "stop":"Delft",
-                "time":"06:39:00"
+                "time":"06:39:00",
+                "realtime":"06:39:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"06:41:00"
+                "time":"06:41:00",
+                "realtime":"06:41:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"06:43:00"
+                "time":"06:43:00",
+                "realtime":"06:43:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"06:44:00"
+                "time":"06:44:00",
+                "realtime":"06:44:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"06:46:00"
+                "time":"06:46:00",
+                "realtime":"06:47:00"
             }
         ]
     },
@@ -374,35 +454,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"06:55:00"
+                "time":"06:55:00",
+                "realtime":"06:55:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"06:57:00"
+                "time":"06:57:00",
+                "realtime":"06:57:00"
             },
             {
                 "stop":"SLUB",
-                "time":"06:58:00"
+                "time":"06:58:00",
+                "realtime":"06:58:00"
             },
             {
                 "stop":"Delft",
-                "time":"06:59:00"
+                "time":"06:59:00",
+                "realtime":"06:59:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"07:01:00"
+                "time":"07:01:00",
+                "realtime":"07:02:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"07:03:00"
+                "time":"07:03:00",
+                "realtime":"07:03:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"07:04:00"
+                "time":"07:04:00",
+                "realtime":"07:04:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"07:06:00"
+                "time":"07:06:00",
+                "realtime":"07:05:00"
             }
         ]
     },
@@ -411,35 +499,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"06:45:00"
+                "time":"06:45:00",
+                "realtime":"06:44:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"06:47:00"
+                "time":"06:47:00",
+                "realtime":"06:47:00"
             },
             {
                 "stop":"SLUB",
-                "time":"06:48:00"
+                "time":"06:48:00",
+                "realtime":"06:48:00"
             },
             {
                 "stop":"Delft",
-                "time":"06:49:00"
+                "time":"06:49:00",
+                "realtime":"06:49:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"06:51:00"
+                "time":"06:51:00",
+                "realtime":"06:51:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"06:53:00"
+                "time":"06:53:00",
+                "realtime":"06:54:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"06:54:00"
+                "time":"06:54:00",
+                "realtime":"06:55:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"06:56:00"
+                "time":"06:56:00",
+                "realtime":"06:58:00"
             }
         ]
     },
@@ -448,35 +544,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"06:50:00"
+                "time":"06:50:00",
+                "realtime":"06:50:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"06:52:00"
+                "time":"06:52:00",
+                "realtime":"06:52:00"
             },
             {
                 "stop":"SLUB",
-                "time":"06:53:00"
+                "time":"06:53:00",
+                "realtime":"06:53:00"
             },
             {
                 "stop":"Delft",
-                "time":"06:54:00"
+                "time":"06:54:00",
+                "realtime":"06:54:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"06:56:00"
+                "time":"06:56:00",
+                "realtime":"06:56:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"06:58:00"
+                "time":"06:58:00",
+                "realtime":"06:58:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"06:59:00"
+                "time":"06:59:00",
+                "realtime":"06:59:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"07:01:00"
+                "time":"07:01:00",
+                "realtime":"07:01:00"
             }
         ]
     },
@@ -485,35 +589,42 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"07:00:00"
+                "time":"07:00:00",
+                "realtime":"07:01:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"07:02:00"
+                "realtime":"07:02:00"
             },
             {
                 "stop":"SLUB",
-                "time":"07:03:00"
+                "time":"07:03:00",
+                "realtime":"07:04:00"
             },
             {
                 "stop":"Delft",
-                "time":"07:04:00"
+                "time":"07:04:00",
+                "realtime":"07:05:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"07:06:00"
+                "time":"07:06:00",
+                "realtime":"07:06:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"07:08:00"
+                "time":"07:08:00",
+                "realtime":"07:08:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"07:09:00"
+                "time":"07:09:00",
+                "realtime":"07:10:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"07:11:00"
+                "time":"07:11:00",
+                "realtime":"07:12:00"
             }
         ]
     },
@@ -522,35 +633,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"07:05:00"
+                "time":"07:05:00",
+                "realtime":"07:07:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"07:07:00"
+                "time":"07:07:00",
+                "realtime":"07:09:00"
             },
             {
                 "stop":"SLUB",
-                "time":"07:08:00"
+                "time":"07:08:00",
+                "realtime":"07:11:00"
             },
             {
                 "stop":"Delft",
-                "time":"07:09:00"
+                "time":"07:09:00",
+                "realtime":"07:10:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"07:11:00"
+                "time":"07:11:00",
+                "realtime":"07:12:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"07:13:00"
+                "time":"07:13:00",
+                "realtime":"07:14:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"07:14:00"
+                "time":"07:14:00",
+                "realtime":"07:15:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"07:16:00"
+                "time":"07:16:00",
+                "realtime":"07:17:00"
             }
         ]
     },
@@ -559,35 +678,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"07:10:00"
+                "time":"07:10:00",
+                "realtime":"07:10:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"07:12:00"
+                "time":"07:12:00",
+                "realtime":"07:13:00"
             },
             {
                 "stop":"SLUB",
-                "time":"07:13:00"
+                "time":"07:13:00",
+                "realtime":"07:14:00"
             },
             {
                 "stop":"Delft",
-                "time":"07:14:00"
+                "time":"07:14:00",
+                "realtime":"07:15:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"07:16:00"
+                "time":"07:16:00",
+                "realtime":"07:17:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"07:18:00"
+                "time":"07:18:00",
+                "realtime":"07:19:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"07:19:00"
+                "time":"07:19:00",
+                "realtime":"07:20:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"07:21:00"
+                "time":"07:21:00",
+                "realtime":"07:22:00"
             }
         ]
     },
@@ -596,35 +723,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"07:15:00"
+                "time":"07:15:00",
+                "realtime":"07:15:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"07:17:00"
+                "time":"07:17:00",
+                "realtime":"07:17:00"
             },
             {
                 "stop":"SLUB",
-                "time":"07:18:00"
+                "time":"07:18:00",
+                "realtime":"07:19:00"
             },
             {
                 "stop":"Delft",
-                "time":"07:19:00"
+                "time":"07:19:00",
+                "realtime":"07:21:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"07:21:00"
+                "time":"07:21:00",
+                "realtime":"07:23:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"07:23:00"
+                "time":"07:23:00",
+                "realtime":"07:24:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"07:24:00"
+                "time":"07:24:00",
+                "realtime":"07:25:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"07:26:00"
+                "time":"07:26:00",
+                "realtime":"07:27:00"
             }
         ]
     },
@@ -633,35 +768,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"07:25:00"
+                "time":"07:25:00",
+                "realtime":"07:26:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"07:27:00"
+                "time":"07:27:00",
+                "realtime":"07:29:00"
             },
             {
                 "stop":"SLUB",
-                "time":"07:28:00"
+                "time":"07:28:00",
+                "realtime":"07:31:00"
             },
             {
                 "stop":"Delft",
-                "time":"07:29:00"
+                "time":"07:29:00",
+                "realtime":"07:33:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"07:31:00"
+                "time":"07:31:00",
+                "realtime":"07:35:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"07:33:00"
+                "time":"07:33:00",
+                "realtime":"07:36:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"07:34:00"
+                "time":"07:34:00",
+                "realtime":"07:37:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"07:36:00"
+                "time":"07:36:00",
+                "realtime":"07:40:00"
             }
         ]
     },
@@ -670,35 +813,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"07:35:00"
+                "time":"07:35:00",
+                "realtime": "07:36:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"07:37:00"
+                "time":"07:37:00",
+                "realtime":"07:38:00"
             },
             {
                 "stop":"SLUB",
-                "time":"07:38:00"
+                "time":"07:38:00",
+                "realtime":"07:40:00"
             },
             {
                 "stop":"Delft",
-                "time":"07:49:00"
+                "time":"07:39:00",
+                "realtime":"07:41:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"07:41:00"
+                "time":"07:41:00",
+                "realtime":"07:43:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"07:43:00"
+                "time":"07:43:00",
+                "realtime":"07:46:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"07:44:00"
+                "time":"07:44:00",
+                "realtime":"07:47:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"07:46:00"
+                "time":"07:46:00",
+                "realtime":"07:49:00"
             }
         ]
     },
@@ -707,35 +858,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"07:45:00"
+                "time":"07:45:00",
+                "realtime":"07:46:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"07:47:00"
+                "time":"07:47:00",
+                "realtime":"07:47:00"
             },
             {
                 "stop":"SLUB",
-                "time":"07:48:00"
+                "time":"07:48:00",
+                "realtime":"07:49:00"
             },
             {
                 "stop":"Delft",
-                "time":"07:49:00"
+                "time":"07:49:00",
+                "realtime":"07:50:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"07:51:00"
+                "time":"07:51:00",
+                "realtime":"07:52:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"07:53:00"
+                "time":"07:53:00",
+                "realtime":"07:54:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"07:54:00"
+                "time":"07:54:00",
+                "realtime":"07:55:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"07:56:00"
+                "time":"07:56:00",
+                "realtime":"07:58:00"
             }
         ]
     },
@@ -744,35 +903,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"07:55:00"
+                "time":"07:55:00",
+                "realtime":"07:56:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"07:57:00"
+                "time":"07:57:00",
+                "realtime":"07:57:00"
             },
             {
                 "stop":"SLUB",
-                "time":"07:58:00"
+                "time":"07:58:00",
+                "realtime":"07:58:00"
             },
             {
                 "stop":"Delft",
-                "time":"07:59:00"
+                "time":"07:59:00",
+                "realtime":"07:59:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"08:01:00"
+                "time":"08:01:00",
+                "realtime":"08:02:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"08:03:00"
+                "time":"08:03:00",
+                "realtime":"08:04:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"08:04:00"
+                "time":"08:04:00",
+                "realtime":"08:05:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"08:06:00"
+                "time":"08:06:00",
+                "realtime":"08:096:00"
             }
         ]
     },
@@ -781,35 +948,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"08:05:00"
+                "time":"08:05:00",
+                "realtime":"08:05:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"08:07:00"
+                "time":"08:07:00",
+                "realtime":"08:07:00"
             },
             {
                 "stop":"SLUB",
-                "time":"08:08:00"
+                "time":"08:08:00",
+                "realtime":"08:08:00"
             },
             {
                 "stop":"Delft",
-                "time":"08:09:00"
+                "time":"08:09:00",
+                "realtime":"08:09:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"08:11:00"
+                "time":"08:11:00",
+                "realtime":"08:11:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"08:13:00"
+                "time":"08:13:00",
+                "realtime":"08:13:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"08:14:00"
+                "time":"08:14:00",
+                "realtime":"08:14:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"08:16:00"
+                "time":"08:16:00",
+                "realtime":"08:16:00"
             }
         ]
     },
@@ -818,19 +993,23 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"08:15:00"
+                "time":"08:15:00",
+                "realtime":"08:15:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"08:17:00"
+                "time":"08:17:00",
+                "realtime":"08:17:00"
             },
             {
                 "stop":"SLUB",
-                "time":"08:18:00"
+                "time":"08:18:00",
+                "realtime":"08:18:00"
             },
             {
                 "stop":"Delft",
-                "time":"08:19:00"
+                "time":"08:19:00",
+                "realtime":"08:19:00"
             },
             {
                 "stop":"Nürnberger Platz",
@@ -838,15 +1017,18 @@
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"08:23:00"
+                "time":"08:23:00",
+                "realtime":"08:23:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"08:24:00"
+                "time":"08:24:00",
+                "realtime":"08:24:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"08:26:00"
+                "time":"08:26:00",
+                "realtime":"08:26:00"
             }
         ]
     },
@@ -855,35 +1037,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"08:25:00"
+                "time":"08:25:00",
+                "realtime":"08:24:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"08:27:00"
+                "time":"08:27:00",
+                "realtime":"08:28:00"
             },
             {
                 "stop":"SLUB",
-                "time":"08:28:00"
+                "time":"08:28:00",
+                "realtime":"08:29:00"
             },
             {
                 "stop":"Delft",
-                "time":"08:29:00"
+                "time":"08:29:00",
+                "realtime":"08:30:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"08:31:00"
+                "time":"08:31:00",
+                "realtime":"08:31:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"08:33:00"
+                "time":"08:33:00",
+                "realtime":"08:33:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"08:34:00"
+                "time":"08:34:00",
+                "realtime":"08:34:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"08:36:00"
+                "time":"08:36:00",
+                "realtime":"08:36:00"
             }
         ]
     },
@@ -892,35 +1082,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"08:35:00"
+                "time":"08:35:00",
+                "realtime":"08:35:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"08:37:00"
+                "time":"08:37:00",
+                "realtime":"08:37:00"
             },
             {
                 "stop":"SLUB",
-                "time":"08:38:00"
+                "time":"08:38:00",
+                "realtime":"08:38:00"
             },
             {
                 "stop":"Delft",
-                "time":"08:39:00"
+                "time":"08:39:00",
+                "realtime":"08:39:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"08:41:00"
+                "time":"08:41:00",
+                "realtime":"08:41:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"08:43:00"
+                "time":"08:43:00",
+                "realtime":"08:43:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"08:44:00"
+                "time":"08:44:00",
+                "realtime":"08:44:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"08:46:00"
+                "time":"08:46:00",
+                "realtime":"08:46:00"
             }
         ]
     },
@@ -929,35 +1127,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"08:40:00"
+                "time":"08:40:00",
+                "realtime":"08:40:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"08:42:00"
+                "time":"08:42:00",
+                "realtime":"08:42:00"
             },
             {
                 "stop":"SLUB",
-                "time":"08:43:00"
+                "time":"08:43:00",
+                "realtime":"08:43:00"
             },
             {
                 "stop":"Delft",
-                "time":"08:44:00"
+                "time":"08:44:00",
+                "realtime":"08:44:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"08:46:00"
+                "time":"08:46:00",
+                "realtime":"08:46:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"08:48:00"
+                "time":"08:48:00",
+                "realtime":"08:48:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"08:49:00"
+                "time":"08:49:00",
+                "realtime":"08:49:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"08:51:00"
+                "time":"08:51:00",
+                "realtime":"08:52:00"
             }
         ]
     },
@@ -966,35 +1172,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"08:45:00"
+                "time":"08:45:00",
+                "realtime":"08:45:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"08:47:00"
+                "time":"08:47:00",
+                "realtime":"08:49:00"
             },
             {
                 "stop":"SLUB",
-                "time":"08:48:00"
+                "time":"08:48:00",
+                "realtime":"08:50:00"
             },
             {
                 "stop":"Delft",
-                "time":"08:49:00"
+                "time":"08:49:00",
+                "realtime":"08:51:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"08:51:00"
+                "time":"08:51:00",
+                "realtime":"08:52:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"08:53:00"
+                "time":"08:53:00",
+                "realtime":"08:54:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"08:54:00"
+                "time":"08:54:00",
+                "realtime":"08:56:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"08:56:00"
+                "time":"08:56:00",
+                "realtime":"08:57:00"
             }
         ]
     },
@@ -1003,35 +1217,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"08:50:00"
+                "time":"08:50:00",
+                "realtime":"08:50:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"08:52:00"
+                "time":"08:52:00",
+                "realtime":"08:52:00"
             },
             {
                 "stop":"SLUB",
-                "time":"08:53:00"
+                "time":"08:53:00",
+                "realtime":"08:53:00"
             },
             {
                 "stop":"Delft",
-                "time":"08:54:00"
+                "time":"08:54:00",
+                "realtime":"08:54:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"08:56:00"
+                "time":"08:56:00",
+                "realtime":"08:56:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"08:58:00"
+                "time":"08:58:00",
+                "realtime":"08:59:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"08:59:00"
+                "time":"08:59:00",
+                "realtime":"09:00:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"09:01:00"
+                "time":"09:01:00",
+                "realtime":"09:02:00"
             }
         ]
     },
@@ -1040,35 +1262,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"08:55:00"
+                "time":"08:55:00",
+                "realtime":"08:54:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"08:57:00"
+                "time":"08:57:00",
+                "realtime":"08:57:00"
             },
             {
                 "stop":"SLUB",
-                "time":"08:58:00"
+                "time":"08:58:00",
+                "realtime":"08:58:00"
             },
             {
                 "stop":"Delft",
-                "time":"08:59:00"
+                "time":"08:59:00",
+                "realtime":"09:00:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"09:01:00"
+                "time":"09:01:00",
+                "realtime":"09:02:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"09:03:00"
+                "time":"09:03:00",
+                "realtime":"09:04:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"09:04:00"
+                "time":"09:04:00",
+                "realtime":"09:05:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"09:06:00"
+                "time":"09:06:00",
+                "realtime":"09:07:00"
             }
         ]
     },
@@ -1077,35 +1307,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"09:00:00"
+                "time":"09:00:00",
+                "realtime":"09:00:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"09:02:00"
+                "time":"09:02:00",
+                "realtime":"09:03:00"
             },
             {
                 "stop":"SLUB",
-                "time":"09:03:00"
+                "time":"09:03:00",
+                "realtime":"09:05:00"
             },
             {
                 "stop":"Delft",
-                "time":"09:04:00"
+                "time":"09:04:00",
+                "realtime":"09:08:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"09:06:00"
+                "time":"09:06:00",
+                "realtime":"09:10:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"09:08:00"
+                "time":"09:08:00",
+                "realtime":"09:12:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"09:09:00"
+                "time":"09:09:00",
+                "realtime":"09:13:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"09:11:00"
+                "time":"09:11:00",
+                "realtime":"09:15:00"
             }
         ]
     },
@@ -1114,35 +1352,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"09:05:00"
+                "time":"09:05:00",
+                "realtime":"09:04:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"09:07:00"
+                "time":"09:07:00",
+                "realtime":"09:07:00"
             },
             {
                 "stop":"SLUB",
-                "time":"09:08:00"
+                "time":"09:08:00",
+                "realtime":"09:08:00"
             },
             {
                 "stop":"Delft",
-                "time":"09:09:00"
+                "time":"09:09:00",
+                "realtime":"09:10:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"09:11:00"
+                "time":"09:11:00",
+                "realtime":"09:12:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"09:13:00"
+                "time":"09:13:00",
+                "realtime":"09:14:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"09:14:00"
+                "time":"09:14:00",
+                "realtime":"09:16:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"09:16:00"
+                "time":"09:16:00",
+                "realtime":"09:17:00"
             }
         ]
     },
@@ -1151,35 +1397,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"09:15:00"
+                "time":"09:15:00",
+                "realtime":"09:14:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"09:17:00"
+                "time":"09:17:00",
+                "realtime":"09:16:00"
             },
             {
                 "stop":"SLUB",
-                "time":"09:18:00"
+                "time":"09:18:00",
+                "realtime":"09:18:00"
             },
             {
                 "stop":"Delft",
-                "time":"09:19:00"
+                "time":"09:19:00",
+                "realtime":"09:19:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"09:21:00"
+                "time":"09:21:00",
+                "realtime":"09:21:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"09:23:00"
+                "time":"09:23:00",
+                "realtime":"09:23:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"09:24:00"
+                "time":"09:24:00",
+                "realtime":"09:24:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"09:26:00"
+                "time":"09:26:00",
+                "realtime":"09:26:00"
             }
         ]
     },
@@ -1188,35 +1442,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"09:25:00"
+                "time":"09:25:00",
+                "realtime":"09:25:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"09:27:00"
+                "time":"09:27:00",
+                "realtime":"09:30:00"
             },
             {
                 "stop":"SLUB",
-                "time":"09:28:00"
+                "time":"09:28:00",
+                "realtime":"09:32:00"
             },
             {
                 "stop":"Delft",
-                "time":"09:29:00"
+                "time":"09:29:00",
+                "realtime":"09:33:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"09:31:00"
+                "time":"09:31:00",
+                "realtime":"09:34:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"09:33:00"
+                "time":"09:33:00",
+                "realtime":"09:35:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"09:34:00"
+                "time":"09:34:00",
+                "realtime":"09:36:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"09:36:00"
+                "time":"09:36:00",
+                "realtime":"09:38:00"
             }
         ]
     },
@@ -1225,35 +1487,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"09:35:00"
+                "time":"09:35:00",
+                "realtime":"09:35:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"09:37:00"
+                "time":"09:37:00",
+                "realtime":"09:37:00"
             },
             {
                 "stop":"SLUB",
-                "time":"09:38:00"
+                "time":"09:38:00",
+                "realtime":"09:38:00"
             },
             {
                 "stop":"Delft",
-                "time":"09:39:00"
+                "time":"09:39:00",
+                "realtime":"09:41:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"09:41:00"
+                "time":"09:43:00",
+                "realtime":"09:43:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"09:43:00"
+                "time":"09:43:00",
+                "realtime":"09:44:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"09:44:00"
+                "time":"09:44:00",
+                "realtime":"09:45:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"09:46:00"
+                "time":"09:46:00",
+                "realtime":"09:48:00"
             }
         ]
     },
@@ -1262,35 +1532,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"09:45:00"
+                "time":"09:45:00",
+                "realtime":"09:45:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"09:47:00"
+                "time":"09:47:00",
+                "realtime":"09:48:00"
             },
             {
                 "stop":"SLUB",
-                "time":"09:48:00"
+                "time":"09:48:00",
+                "realtime":"09:48:00"
             },
             {
                 "stop":"Delft",
-                "time":"09:49:00"
+                "time":"09:49:00",
+                "realtime":"09:49:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"09:51:00"
+                "time":"09:51:00",
+                "realtime":"09:51:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"09:53:00"
+                "time":"09:53:00",
+                "realtime":"09:53:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"09:54:00"
+                "time":"09:54:00",
+                "realtime":"09:54:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"09:56:00"
+                "time":"09:56:00",
+                "realtime":"09:55:00"
             }
         ]
     },
@@ -1299,35 +1577,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"09:55:00"
+                "time":"09:55:00",
+                "realtime":"09:55:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"09:57:00"
+                "time":"09:57:00",
+                "realtime":"09:57:00"
             },
             {
                 "stop":"SLUB",
-                "time":"09:58:00"
+                "time":"09:58:00",
+                "realtime":"09:58:00"
             },
             {
                 "stop":"Delft",
-                "time":"09:59:00"
+                "time":"09:59:00",
+                "realtime":"09:59:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"10:01:00"
+                "time":"10:01:00",
+                "realtime":"10:01:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"10:03:00"
+                "time":"10:03:00",
+                "realtime":"10:03:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"10:04:00"
+                "time":"10:04:00",
+                "realtime":"10:04:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"10:06:00"
+                "time":"10:06:00",
+                "realtime":"10:06:00"
             }
         ]
     },
@@ -1336,35 +1622,44 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"10:05:00"
+                "time":"10:05:00",
+                "time":"10:05:00",
+                "realtime":"10:05:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"10:07:00"
+                "time":"10:07:00",
+                "realtime":"10:07:00"
             },
             {
                 "stop":"SLUB",
-                "time":"10:08:00"
+                "time":"10:08:00",
+                "realtime":"10:08:00"
             },
             {
                 "stop":"Delft",
-                "time":"10:09:00"
+                "time":"10:09:00",
+                "realtime":"10:09:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"10:11:00"
+                "time":"10:11:00",
+                "realtime":"10:11:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"10:13:00"
+                "time":"10:13:00",
+                "realtime":"10:13:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"10:14:00"
+                "time":"10:14:00",
+                "realtime":"10:14:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"10:16:00"
+                "time":"10:16:00",
+                "realtime":"10:16:00"
             }
         ]
     },
@@ -1373,35 +1668,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"10:15:00"
+                "time":"10:15:00",
+                "realtime":"10:15:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"10:17:00"
+                "time":"10:17:00",
+                "realtime":"10:17:00"
             },
             {
                 "stop":"SLUB",
-                "time":"10:18:00"
+                "time":"10:18:00",
+                "realtime":"10:18:00"
             },
             {
                 "stop":"Delft",
-                "time":"10:19:00"
+                "time":"10:19:00",
+                "realtime":"10:19:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"10:21:00"
+                "time":"10:21:00",
+                "realtime":"10:21:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"10:23:00"
+                "time":"10:23:00",
+                "realtime":"10:23:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"10:24:00"
+                "time":"10:24:00",
+                "realtime":"10:24:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"10:26:00"
+                "time":"10:26:00",
+                "realtime":"10:28:00"
             }
         ]
     },
@@ -1410,35 +1713,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"10:25:00"
+                "time":"10:25:00",
+                "realtime":"10:24:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"10:27:00"
+                "time":"10:27:00",
+                "realtime":"10:26:00"
             },
             {
                 "stop":"SLUB",
-                "time":"10:28:00"
+                "time":"10:28:00",
+                "realtime":"10:27:00"
             },
             {
                 "stop":"Delft",
-                "time":"10:29:00"
+                "time":"10:29:00",
+                "realtime":"10:29:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"10:31:00"
+                "time":"10:31:00",
+                "realtime":"10:31:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"10:33:00"
+                "time":"10:33:00",
+                "realtime":"10:33:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"10:34:00"
+                "time":"10:34:00",
+                "realtime":"10:34:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"10:36:00"
+                "time":"10:36:00",
+                "realtime":"10:36:00"
             }
         ]
     },
@@ -1447,35 +1758,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"10:30:00"
+                "time":"10:30:00",
+                "realtime":"10:30:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"10:32:00"
+                "time":"10:32:00",
+                "realtime":"10:32:00"
             },
             {
                 "stop":"SLUB",
-                "time":"10:33:00"
+                "time":"10:33:00",
+                "realtime":"10:33:00"
             },
             {
                 "stop":"Delft",
-                "time":"10:34:00"
+                "time":"10:34:00",
+                "realtime":"10:34:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"10:36:00"
+                "time":"10:36:00",
+                "realtime":"10:36:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"10:38:00"
+                "time":"10:38:00",
+                "realtime":"10:38:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"10:39:00"
+                "time":"10:39:00",
+                "realtime":"10:39:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"10:41:00"
+                "time":"10:41:00",
+                "realtime":"10:41:00"
             }
         ]
     },
@@ -1484,35 +1803,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"10:35:00"
+                "time":"10:35:00",
+                "realtime":"10:35:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"10:37:00"
+                "time":"10:37:00",
+                "realtime":"10:37:00"
             },
             {
                 "stop":"SLUB",
-                "time":"10:38:00"
+                "time":"10:38:00",
+                "realtime":"10:38:00"
             },
             {
                 "stop":"Delft",
-                "time":"10:39:00"
+                "time":"10:39:00",
+                "realtime":"10:39:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"10:41:00"
+                "time":"10:41:00",
+                "realtime":"10:41:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"10:43:00"
+                "time":"10:43:00",
+                "realtime":"10:43:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"10:44:00"
+                "time":"10:44:00",
+                "realtime":"10:44:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"10:46:00"
+                "time":"10:46:00",
+                "realtime":"10:46:00"
             }
         ]
     },
@@ -1521,35 +1848,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"10:40:00"
+                "time":"10:40:00",
+                "realtime":"10:40:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"10:42:00"
+                "time":"10:42:00",
+                "realtime":"10:42:00"
             },
             {
                 "stop":"SLUB",
-                "time":"10:43:00"
+                "time":"10:43:00",
+                "realtime":"10:43:00"
             },
             {
                 "stop":"Delft",
-                "time":"10:44:00"
+                "time":"10:44:00",
+                "realtime":"10:44:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"10:46:00"
+                "time":"10:46:00",
+                "realtime":"10:46:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"10:48:00"
+                "time":"10:48:00",
+                "realtime":"10:48:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"10:49:00"
+                "time":"10:49:00",
+                "realtime":"10:49:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"10:51:00"
+                "time":"10:51:00",
+                "realtime":"10:51:00"
             }
         ]
     },
@@ -1558,35 +1893,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"10:45:00"
+                "time":"10:45:00",
+                "realtime":"10:45:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"10:47:00"
+                "time":"10:47:00",
+                "realtime":"10:47:00"
             },
             {
                 "stop":"SLUB",
-                "time":"10:48:00"
+                "time":"10:48:00",
+                "realtime":"10:48:00"
             },
             {
                 "stop":"Delft",
-                "time":"10:49:00"
+                "time":"10:49:00",
+                "realtime":"10:49:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"10:51:00"
+                "time":"10:51:00",
+                "realtime":"10:52:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"10:53:00"
+                "time":"10:53:00",
+                "realtime":"10:54:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"10:54:00"
+                "time":"10:54:00",
+                "realtime":"10:55:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"10:56:00"
+                "time":"10:56:00",
+                "realtime":"10:55:00"
             }
         ]
     },
@@ -1595,35 +1938,43 @@
         "stops":[
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"10:50:00"
+                "time":"10:50:00",
+                "realtime":"10:49:00"
             },
             {
                 "stop":"Zellescher Weg",
-                "time":"10:52:00"
+                "time":"10:52:00",
+                "realtime":"10:54:00"
             },
             {
                 "stop":"SLUB",
-                "time":"10:53:00"
+                "time":"10:53:00",
+                "realtime":"10:55:00"
             },
             {
                 "stop":"Delft",
-                "time":"10:54:00"
+                "time":"10:54:00",
+                "realrealtime":"10:57:00"
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"10:56:00"
+                "time":"10:56:00",
+                "realtime":"10:58:00"
             },
             {
                 "stop":"Bernhardstraße",
-                "time":"10:58:00"
+                "time":"10:58:00",
+                "realtime":"10:59:00"
             },
             {
                 "stop":"Chemnitzer Straße",
-                "time":"10:59:00"
+                "time":"10:59:00",
+                "realtime":"11:00:00"
             },
             {
                 "stop":"Löbtau",
-                "time":"11:01:00"
+                "time":"11:01:00",
+                "realtime":"11:02:00"
             }
         ]
     },
@@ -2277,7 +2628,7 @@
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"14:21:00"
+                "time":"13:21:00"
             },
             {
                 "stop":"Bernhardstraße",
@@ -2314,7 +2665,7 @@
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"14:31:00"
+                "time":"13:31:00"
             },
             {
                 "stop":"Bernhardstraße",
@@ -2351,7 +2702,7 @@
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"14:41:00"
+                "time":"13:41:00"
             },
             {
                 "stop":"Bernhardstraße",
@@ -2388,7 +2739,7 @@
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"14:51:00"
+                "time":"13:51:00"
             },
             {
                 "stop":"Bernhardstraße",
