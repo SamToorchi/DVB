@@ -72,14 +72,14 @@ d3.queue()
                 'Delft - Technopolis'
             ],
             [
-                'Den Haag Central',
-                'Den Haag HS',
-                'Den Haag Moerwijk',
-                'Rijswijk',
+                'Löbtau',
+                'Chemnitzer Straße',
+                'Bernhardstraße',
+                'Nürnberger Platz',
                 'Delft',
-                'Delft Zuid',
-                'Schiedam Central',
-                'Rotterdam Central'
+                'SLUB',
+                'Zellescher Weg',
+                'C.-D.-Friedrich Straße'
             ]
         ];
 
@@ -233,7 +233,7 @@ d3.queue()
             // Create an array with the position of each active train trip
             var activeTrainPositions = activeTrainTrips.map((trip) => {
                 // Store the direction of the trip basing on the first stop
-                var direction = trip.stops[0].stop === 'Rotterdam Central' ? 'S' : 'N',
+                var direction = trip.stops[0].stop === 'C.-D.-Friedrich Straße' ? 'S' : 'N',
                     pos = getPosition(trip.stops, trainScale);
                 real_pos = getRealPosition(trip.stops, trainScale);
 
@@ -266,7 +266,10 @@ d3.queue()
             // Bind the circle elements to the active train trips, using as key
             // both the positions and the direction of the train
             var trains = trainsGroup.selectAll('.trains circle')
-            .data(activeTrainPositions, (p) => `${p.pos}|${p.direction}|${p.real_pos}`); 
+            .data(activeTrainPositions, (p) => `${p.pos}|${p.direction}|${p.real_pos}`);
+
+            var trainsRealTime = trainsGroup.selectAll('.trains circle')
+            .data(activeTrainPositions, (p) => `${p.direction}|${p.real_pos}`);
 
             //bind the line element to the active train trips
             var erzeuge = trainDifference.selectAll('.train_difference line')
@@ -282,7 +285,7 @@ d3.queue()
                 console.log(pos, real_pos); 
             }
 
-            
+
             //create line between circles
             erzeuge.enter().append('line')
                 .attr('x1', (p) => p.direction === 'N' ? trips_spacing : -trips_spacing)
@@ -308,7 +311,7 @@ d3.queue()
             trains.exit().remove();
 
             //create circles for real time
-            trains.enter().append('circle')
+            trainsRealTime.enter().append('circle')
                 .attr('r', default_circle_radius)
                 .attr('data-trip-id', (p) => p.tripId)
                 .attr('cx', (p) => p.direction === 'N' ? trips_spacing : -trips_spacing)
@@ -319,7 +322,7 @@ d3.queue()
 
 
             // Exit event for the train trips
-            trains.exit().remove();
+            trainsRealTime.exit().remove();
 
             // Bind the circle elements to the active bus trips, using as key
             // both the position and the direction of the bus
@@ -375,10 +378,10 @@ d3.queue()
         // List of the stops, divided in left, center and right
         var stops = [
             [
-                'Den Haag Central',
-                'Den Haag HS',
-                'Den Haag Moerwijk',
-                'Rijswijk',
+                'Löbtau',
+                'Chemnitzer Straße',
+                'Bernhardstraße',
+                'Nürnberger Platz',
                 'Delft',
                 'Delft - Zuidpoort',
                 'Delft - Julianalaan',
@@ -400,9 +403,9 @@ d3.queue()
                 'Delft - Julianalaan',
                 'Delft - Zuidpoort',
                 'Delft',
-                'Delft Zuid',
-                'Schiedam Central',
-                'Rotterdam Central'
+                'SLUB',
+                'Zellescher Weg',
+                'C.-D.-Friedrich Straße'
             ]
         ];
 
