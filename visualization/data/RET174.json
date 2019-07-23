@@ -13,52 +13,12 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"13:15:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"13:17:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"13:17:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"13:18:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"13:20:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"13:21:00"
          }
       ]
    },
    {
       "trip_id":"45431340",
       "stops":[
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"09:09:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"09:09:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"09:11:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"09:12:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"09:13:00"
-         },
          {
             "stop":"Delft - Julianalaan",
             "time":"09:14:30"
@@ -87,52 +47,12 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"09:47:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"09:49:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"09:49:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"09:50:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"09:52:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"09:53:00"
          }
       ]
    },
    {
       "trip_id":"45430626",
       "stops":[
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"13:03:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"13:03:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"13:05:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"13:06:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"13:07:00"
-         },
          {
             "stop":"Delft - Julianalaan",
             "time":"13:08:30"
@@ -150,26 +70,6 @@
    {
       "trip_id":"45435100",
       "stops":[
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"17:38:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"17:38:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"17:40:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"17:41:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"17:42:00"
-         },
          {
             "stop":"Delft - Julianalaan",
             "time":"17:43:30"
@@ -198,26 +98,6 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"18:13:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"18:15:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"18:15:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"18:16:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"18:18:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"18:19:00"
          }
       ]
    },
@@ -235,26 +115,6 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"14:45:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"14:47:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"14:47:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"14:48:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"14:50:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"14:51:00"
          }
       ]
    },
@@ -272,52 +132,12 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"15:15:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"15:17:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"15:17:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"15:18:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"15:20:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"15:21:00"
          }
       ]
    },
    {
       "trip_id":"45432480",
       "stops":[
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"17:10:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"17:10:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"17:12:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"17:13:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"17:14:00"
-         },
          {
             "stop":"Delft - Julianalaan",
             "time":"17:15:30"
@@ -346,52 +166,12 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"17:45:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"17:47:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"17:47:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"17:48:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"17:50:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"17:51:00"
          }
       ]
    },
    {
       "trip_id":"45433693",
       "stops":[
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"07:25:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"07:25:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"07:27:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"07:28:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"07:29:00"
-         },
          {
             "stop":"Delft - Julianalaan",
             "time":"07:30:30"
@@ -420,26 +200,6 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"07:45:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"07:47:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"07:47:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"07:48:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"07:50:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"07:51:00"
          }
       ]
    },
@@ -457,52 +217,12 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"12:45:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"12:47:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"12:47:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"12:48:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"12:50:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"12:51:00"
          }
       ]
    },
    {
       "trip_id":"45432014",
       "stops":[
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"19:05:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"19:05:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"19:07:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"19:08:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"19:09:00"
-         },
          {
             "stop":"Delft - Julianalaan",
             "time":"19:10:30"
@@ -531,52 +251,12 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"08:47:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"08:49:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"08:49:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"08:50:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"08:52:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"08:53:00"
          }
       ]
    },
    {
       "trip_id":"45433789",
       "stops":[
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"07:02:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"07:02:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"07:04:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"07:05:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"07:06:00"
-         },
          {
             "stop":"Delft - Julianalaan",
             "time":"07:07:30"
@@ -605,26 +285,6 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"16:44:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"16:46:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"16:46:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"16:47:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"16:49:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"16:50:00"
          }
       ]
    },
@@ -642,52 +302,12 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"11:15:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"11:17:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"11:17:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"11:18:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"11:20:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"11:21:00"
          }
       ]
    },
    {
       "trip_id":"45433791",
       "stops":[
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"11:33:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"11:33:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"11:35:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"11:36:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"11:37:00"
-         },
          {
             "stop":"Delft - Julianalaan",
             "time":"11:38:30"
@@ -716,52 +336,12 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"13:45:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"13:47:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"13:47:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"13:48:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"13:50:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"13:51:00"
          }
       ]
    },
    {
       "trip_id":"45432017",
       "stops":[
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"16:09:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"16:09:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"16:11:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"16:12:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"16:13:00"
-         },
          {
             "stop":"Delft - Julianalaan",
             "time":"16:14:30"
@@ -790,26 +370,6 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"19:43:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"19:45:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"19:45:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"19:46:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"19:48:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"19:49:00"
          }
       ]
    },
@@ -827,52 +387,12 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"09:17:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"09:19:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"09:19:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"09:20:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"09:22:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"09:23:00"
          }
       ]
    },
    {
       "trip_id":"45433048",
       "stops":[
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"10:33:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"10:33:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"10:35:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"10:36:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"10:37:00"
-         },
          {
             "stop":"Delft - Julianalaan",
             "time":"10:38:30"
@@ -890,26 +410,6 @@
    {
       "trip_id":"45435630",
       "stops":[
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"18:08:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"18:08:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"18:10:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"18:11:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"18:12:00"
-         },
          {
             "stop":"Delft - Julianalaan",
             "time":"18:13:30"
@@ -938,26 +438,6 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"08:17:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"08:19:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"08:19:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"08:20:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"08:22:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"08:23:00"
          }
       ]
    },
@@ -975,26 +455,6 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"15:45:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"15:47:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"15:47:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"15:48:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"15:50:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"15:51:00"
          }
       ]
    },
@@ -1012,26 +472,6 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"18:43:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"18:45:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"18:45:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"18:46:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"18:48:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"18:49:00"
          }
       ]
    },
@@ -1049,52 +489,12 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"14:15:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"14:17:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"14:17:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"14:18:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"14:20:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"14:21:00"
          }
       ]
    },
    {
       "trip_id":"45429737",
       "stops":[
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"15:06:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"15:06:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"15:08:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"15:09:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"15:10:00"
-         },
          {
             "stop":"Delft - Julianalaan",
             "time":"15:11:30"
@@ -1112,26 +512,6 @@
    {
       "trip_id":"45428771",
       "stops":[
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"09:33:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"09:33:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"09:35:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"09:36:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"09:37:00"
-         },
          {
             "stop":"Delft - Julianalaan",
             "time":"09:38:30"
@@ -1160,26 +540,6 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"07:15:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"07:17:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"07:17:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"07:18:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"07:20:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"07:21:00"
          }
       ]
    },
@@ -1197,52 +557,12 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"11:45:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"11:47:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"11:47:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"11:48:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"11:50:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"11:51:00"
          }
       ]
    },
    {
       "trip_id":"45431411",
       "stops":[
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"07:56:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"07:56:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"07:58:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"07:59:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"08:00:00"
-         },
          {
             "stop":"Delft - Julianalaan",
             "time":"08:01:30"
@@ -1271,52 +591,12 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"10:17:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"10:19:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"10:19:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"10:20:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"10:22:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"10:23:00"
          }
       ]
    },
    {
       "trip_id":"45432234",
       "stops":[
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"14:06:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"14:06:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"14:08:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"14:09:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"14:10:00"
-         },
          {
             "stop":"Delft - Julianalaan",
             "time":"14:11:30"
@@ -1335,26 +615,6 @@
       "trip_id":"45429582",
       "stops":[
          {
-            "stop":"Delft - TU Technopolis",
-            "time":"14:36:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"14:36:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"14:38:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"14:39:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"14:40:00"
-         },
-         {
             "stop":"Delft - Julianalaan",
             "time":"14:41:30"
          },
@@ -1372,26 +632,6 @@
       "trip_id":"45429599",
       "stops":[
          {
-            "stop":"Delft - TU Technopolis",
-            "time":"12:03:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"12:03:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"12:05:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"12:06:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"12:07:00"
-         },
-         {
             "stop":"Delft - Julianalaan",
             "time":"12:08:30"
          },
@@ -1408,26 +648,6 @@
    {
       "trip_id":"45429598",
       "stops":[
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"16:40:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"16:40:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"16:42:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"16:43:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"16:44:00"
-         },
          {
             "stop":"Delft - Julianalaan",
             "time":"16:45:30"
@@ -1456,26 +676,6 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"17:15:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"17:17:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"17:17:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"17:18:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"17:20:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"17:21:00"
          }
       ]
    },
@@ -1493,52 +693,12 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"12:15:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"12:17:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"12:17:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"12:18:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"12:20:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"12:21:00"
          }
       ]
    },
    {
       "trip_id":"45430801",
       "stops":[
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"12:33:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"12:33:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"12:35:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"12:36:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"12:37:00"
-         },
          {
             "stop":"Delft - Julianalaan",
             "time":"12:38:30"
@@ -1557,26 +717,6 @@
       "trip_id":"45435255",
       "stops":[
          {
-            "stop":"Delft - TU Technopolis",
-            "time":"10:03:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"10:03:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"10:05:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"10:06:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"10:07:00"
-         },
-         {
             "stop":"Delft - Julianalaan",
             "time":"10:08:30"
          },
@@ -1594,26 +734,6 @@
       "trip_id":"45433423",
       "stops":[
          {
-            "stop":"Delft - TU Technopolis",
-            "time":"11:03:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"11:03:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"11:05:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"11:06:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"11:07:00"
-         },
-         {
             "stop":"Delft - Julianalaan",
             "time":"11:08:30"
          },
@@ -1630,26 +750,6 @@
    {
       "trip_id":"45429256",
       "stops":[
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"15:39:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"15:39:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"15:41:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"15:42:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"15:43:00"
-         },
          {
             "stop":"Delft - Julianalaan",
             "time":"15:44:30"
@@ -1678,52 +778,12 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"16:14:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"16:16:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"16:16:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"16:17:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"16:19:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"16:20:00"
          }
       ]
    },
    {
       "trip_id":"45435793",
       "stops":[
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"08:39:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"08:39:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"08:41:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"08:42:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"08:43:00"
-         },
          {
             "stop":"Delft - Julianalaan",
             "time":"08:44:30"
@@ -1741,26 +801,6 @@
    {
       "trip_id":"45431339",
       "stops":[
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"13:33:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"13:33:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"13:35:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"13:36:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"13:37:00"
-         },
          {
             "stop":"Delft - Julianalaan",
             "time":"13:38:30"
@@ -1789,26 +829,6 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"10:46:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"10:48:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"10:48:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"10:49:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"10:51:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"10:52:00"
          }
       ]
    },
@@ -1826,52 +846,12 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"19:13:43"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"19:15:00"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"19:15:50"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"19:16:43"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"19:18:13"
-         },
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"19:19:00"
          }
       ]
    },
    {
       "trip_id":"45429254",
       "stops":[
-         {
-            "stop":"Delft - TU Technopolis",
-            "time":"18:38:00"
-         },
-         {
-            "stop":"Delft - TU Kluyverpark",
-            "time":"18:38:51"
-         },
-         {
-            "stop":"Delft - TU S&C",
-            "time":"18:40:18"
-         },
-         {
-            "stop":"Delft - TU Mekelpark",
-            "time":"18:41:12"
-         },
-         {
-            "stop":"Delft - TU Aula",
-            "time":"18:42:00"
-         },
          {
             "stop":"Delft - Julianalaan",
             "time":"18:43:30"

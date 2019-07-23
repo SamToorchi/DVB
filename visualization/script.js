@@ -264,11 +264,11 @@ d3.queue()
 
 
             // Bind the circle elements to the active train trips, using as key
-            // both the position and the direction of the train
+            // both the positions and the direction of the train
             var trains = trainsGroup.selectAll('.trains circle')
             .data(activeTrainPositions, (p) => `${p.pos}|${p.direction}|${p.real_pos}`); 
 
-
+            //bind the line element to the active train trips
             var erzeuge = trainDifference.selectAll('.train_difference line')
             .data(activeTrainPositions, (p) => `${p.pos}|${p.direction}|${p.real_pos}`);
 
@@ -282,7 +282,8 @@ d3.queue()
                 console.log(pos, real_pos); 
             }
 
-
+            
+            //create line between circles
             erzeuge.enter().append('line')
                 .attr('x1', (p) => p.direction === 'N' ? trips_spacing : -trips_spacing)
                 .attr('x2', (p) => p.direction === 'N' ? trips_spacing : -trips_spacing)
@@ -306,7 +307,7 @@ d3.queue()
             // Exit event for the train trips
             trains.exit().remove();
 
-
+            //create circles for real time
             trains.enter().append('circle')
                 .attr('r', default_circle_radius)
                 .attr('data-trip-id', (p) => p.tripId)
