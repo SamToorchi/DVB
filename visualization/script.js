@@ -268,12 +268,17 @@ d3.queue()
             var trains = trainsGroup.selectAll('.trains circle')
             .data(activeTrainPositions, (p) => `${p.pos}|${p.direction}|${p.real_pos}`);
 
+            /*
             var trainsRealTime = trainsGroup.selectAll('.trains circle')
-            .data(activeTrainPositions, (p) => `${p.direction}|${p.real_pos}`);
+            .data(activeTrainPositions, (q) => `${q.direction}|${q.real_pos}`);
+            */
 
             //bind the line element to the active train trips
             var erzeuge = trainDifference.selectAll('.train_difference line')
             .data(activeTrainPositions, (p) => `${p.pos}|${p.direction}|${p.real_pos}`);
+
+            var trainsRealTime = trainDifference.selectAll('.train_difference circle')
+            .data(activeTrainPositions, (q) => `${q.direction}|${q.real_pos}`);
 
 
 
@@ -313,9 +318,9 @@ d3.queue()
             //create circles for real time
             trainsRealTime.enter().append('circle')
                 .attr('r', default_circle_radius)
-                .attr('data-trip-id', (p) => p.tripId)
-                .attr('cx', (p) => p.direction === 'N' ? trips_spacing : -trips_spacing)
-                .attr('cy', (p) => p.real_pos)
+                .attr('data-trip-id', (q) => q.tripId)
+                .attr('cx', (q) => q.direction === 'N' ? trips_spacing : -trips_spacing)
+                .attr('cy', (q) => q.real_pos)
                 .attr('fill', 'red')
                 .attr('stroke-width', '2')
                 .attr('stroke', 'red');
