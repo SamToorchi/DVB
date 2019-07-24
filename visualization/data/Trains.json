@@ -6795,7 +6795,6 @@
             {
                 "stop":"Bernhardstraße",
                 "time":"11:14:00",
-                "time":"11:14:00",
                 "realtime":"11:14:00"
             },
             {
@@ -8510,8 +8509,8 @@
             },
             {
                 "stop":"Nürnberger Platz",
-                "time":"16:25:00"
-                "realtime":"16:25:00",
+                "time":"16:25:00",
+                "realtime":"16:25:00"
             },
             {
                 "stop":"Delft",
@@ -9149,17 +9148,17 @@
             },
             {
                 "stop":"SLUB",
-                "time":"18:14:00"
+                "time":"18:14:00",
                 "realtime":"18:15:00"
             },
             {  
                 "stop":"Zellescher Weg",
-                "time":"18:15:00"
+                "time":"18:15:00",
                 "realtime":"18:16:00"
             },
             {
                 "stop":"C.-D.-Friedrich Straße",
-                "time":"18:17:00"
+                "time":"18:17:00",
                 "realtime":"18:19:00"
             }
         ]
@@ -9259,7 +9258,7 @@
             },
             {
                 "stop":"Delft",
-                "time":"18:27:00"
+                "time":"18:27:00",
                 "realtime":"18:31:00"
             },
             {
