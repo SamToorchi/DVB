@@ -172,9 +172,21 @@ d3.queue()
         function renderMapAtTime(actualTime) {
             // Verifies if a trip is active at the current time
             function active(trip) {
-                var startTime = parseTime(trip.stops[0].time);
+                if (parseTime(trip.stops[0].time) < parseTime(trip.stops[0].realtime)){
+                    var startTime = parseTime(trip.stops[0].time);
+                }
+                else{
+                    var startTime = parseTime(trip.stops[0].realtime);
+                }
+                
+                if(parseTime(trip.stops[0].time) > parseTime(trip.stops[0].realtime)){
+                    var endTime = parseTime(trip.stops[trip.stops.length-1].time);
+                }
+                else{
+                    var endTime = parseTime(trip.stops[trip.stops.length-1].realtime);
+                }
 
-                var endTime = parseTime(trip.stops[trip.stops.length-1].time);
+                
 
                 return startTime < actualTime && actualTime < endTime;
             }
@@ -182,6 +194,7 @@ d3.queue()
             // Filter the bus and train trips to keep only those that are active
             // in this point in time
             var activeTrainTrips = trainsData.filter(active);
+            console.log('activeTrainTrips');
             console.log(activeTrainTrips);
 
             var activeBusTrips = busData.filter(active);
@@ -189,6 +202,8 @@ d3.queue()
             // Given a list of stops and a scale, computes the position
             // of the vehicle
             function getPosition(tripStopList, scale) {
+                i=0;
+                
                 // Find which was the last stop of this trip
                 for (var i = 0; i < tripStopList.length - 1; i++) {
                     if (parseTime(tripStopList[i+1].time) > actualTime) break;
@@ -210,13 +225,14 @@ d3.queue()
 
             function getRealPosition(tripStopList, scale) {
                 // Find which was the last stop of this trip
-                /*
+                var i = 0;
+                
                 for (var i = 0; i < tripStopList.length - 1; i++) {
                     if (parseTime(tripStopList[i+1].realtime) > actualTime) break;
                 }
-                */
+                
 
-                var i = 0;
+                
                 // Use interpolation to compute current position of the vehicle
                 var lastStop = tripStopList[i],
                     nextStop = tripStopList[i+1],
@@ -234,17 +250,8 @@ d3.queue()
             var activeTrainPositions = activeTrainTrips.map((trip) => {
                 // Store the direction of the trip basing on the first stop
                 var direction = trip.stops[0].stop === 'C.-D.-Friedrich Straße' ? 'S' : 'N',
-                    pos = getPosition(trip.stops, trainScale);
+                pos = getPosition(trip.stops, trainScale),
                 real_pos = getRealPosition(trip.stops, trainScale);
-
-                var differencePath = [pos, real_pos];
-                console.log(differencePath);
-
-                // Line generator for the path representing a trip
-                var differenceData = [[-6,real_pos], [-6,pos]];
-
-                var lineGeneratorForDifference = d3.line();
-                var pathStringForDifference = lineGeneratorForDifference(differenceData);
 
                 return {pos: pos, real_pos: real_pos, direction: direction, tripId: trip.trip_id};
             });
