@@ -185,22 +185,15 @@ d3.queue()
               if (trip.stops[0].stop == "Löbtau" | trip.stops[0].stop == "C.-D.-Friedrich Straße"){
                 if (parseTime(trip.stops[0].time) < parseTime(trip.stops[0].realtime)){
                     var startTime = parseTime(trip.stops[0].time);
-                    //var startTime = d3.timeMinute.offset(startTime, -1);
                 }
                 else{
                     var startTime = parseTime(trip.stops[0].realtime);
                     var startTime = d3.timeMinute.offset(startTime, -1);
                 }
-/*
-                if(parseTime(trip.stops[trip.stops.length-1].time) > parseTime(trip.stops[trip.stops.length-1].realtime)){
-                    var endTime = parseTime(trip.stops[trip.stops.length-1].time);
-                    //var endTime = d3.timeMinute.offset(endTime, -5);
-                }
-                else{
-                */
+
                     var endTime = parseTime(trip.stops[trip.stops.length-1].realtime);
-                    var endTime = d3.timeMinute.offset(endTime, -0.2);
-                
+                    var endTime = d3.timeSecond.offset(endTime, 20);
+
               }
 
               else{
@@ -235,11 +228,20 @@ d3.queue()
           var lastStop = tripStopList[i],
             nextStop = tripStopList[i+1],
             lastStopUnixTime = parseTime(lastStop.time).getTime(),
-            currentUnixTime = actualTime.getTime(),
-            nextStopUnixTime = parseTime(nextStop.time).getTime(),
+            currentUnixTime = actualTime.getTime();
+
+            if(nextStop === undefined){
+              console.log("HAHAHA");
+                var nextStopUnixTime = d3.timeMinute.offset(lastStopUnixTime, 10);
+                var varnextStop = lastStop.stop;
+            }
+            else{
+              var nextStopUnixTime = parseTime(nextStop.time).getTime();
+              var varnextStop = nextStop.stop;
+            }
             ratio = (currentUnixTime - lastStopUnixTime)/(nextStopUnixTime - lastStopUnixTime);
 
-          return scale(lastStop.stop) + ratio * (scale(nextStop.stop) - scale(lastStop.stop));
+          return scale(lastStop.stop) + ratio * (scale(varnextStop) - scale(lastStop.stop));
             }
 
 
@@ -257,11 +259,20 @@ d3.queue()
                 var lastStop = tripStopList[i],
                     nextStop = tripStopList[i+1],
                     lastStopUnixTime = parseTime(lastStop.realtime).getTime(),
-                    currentUnixTime = actualTime.getTime(),
-                    nextStopUnixTime = parseTime(nextStop.realtime).getTime(),
+                    currentUnixTime = actualTime.getTime();
+                    if(nextStop === undefined){
+                      console.log("QQQQQQ");
+                        var nextStopUnixTime = d3.timeMinute.offset(lastStopUnixTime, 2);
+                        var varnextStop = lastStop.stop;
+                    }
+                    else{
+                      var nextStopUnixTime = parseTime(nextStop.realtime).getTime();
+                      var varnextStop = nextStop.stop;
+                    }
+
                     ratio = (currentUnixTime - lastStopUnixTime)/(nextStopUnixTime - lastStopUnixTime);
 
-                return scale(lastStop.stop) + ratio * (scale(nextStop.stop) - scale(lastStop.stop));
+                return scale(lastStop.stop) + ratio * (scale(varnextStop) - scale(lastStop.stop));
             }
 
             // Create an array with the position of each active train trip
@@ -560,9 +571,8 @@ d3.queue()
             yPos = yPos < default_timeline_y ? default_timeline_y : yPos;
             // Get the time corresponding to the actual mouse position
             // and format it
-            var time = yScale.invert(yPos),
+            var time = yScale.invert(yPos) ,
                 formattedTime = formatTimelineTime(time);
-
             Map.renderMapAtTime(time);
 
             // Update the y position of the timeline group
