@@ -37,9 +37,9 @@ function tripMouseOut(tripId) {
 d3.queue()
 
     .defer(d3.json, 'data/Trains.json')
-    .defer(d3.json, 'data/timetableVTN69.min.json')
-    .defer(d3.json, 'data/timetableRET40.min.json')
-    .defer(d3.json, 'data/timetableRET174.min.json')
+    .defer(d3.json, 'data/VTN69.json')
+    .defer(d3.json, 'data/RET40.json')
+    .defer(d3.json, 'data/RET174.json')
 
 /*
     .defer(d3.json, 'data/Trains.json')
@@ -72,12 +72,12 @@ d3.queue()
                 'Delft',
                 'Delft - Zuidpoort',
                 'Delft - Julianalaan',
-                'Delft - TU Aula',
-                'Delft - TU Mekelpark',
-                'Delft - TU S&C',
-                'Delft - TU Kluyverpark',
-                'Delft - TU Technopolis',
-                'Hauptbahnhof'
+              //  'Delft - TU Aula',
+            //    'Delft - TU Mekelpark',
+              //  'Delft - TU S&C',
+              //  'Delft - TU Kluyverpark',
+            //    'Delft - TU Technopolis',
+                'Wendeplatz'
             ],
             [
                 'Löbtau',
@@ -411,7 +411,7 @@ d3.queue()
         var realStopName = (stop) => stop.indexOf('|') === -1 ? stop : stop.substring(0, stop.length-2);
 
         // Used to get the 'deduplicated' bus stop name
-        var deduplicatedBusStop = (stop, side) => stop === 'Delft - Technopolis' ? stop : `${stop}|${side}`;
+        var deduplicatedBusStop = (stop, side) => stop === 'Wendeplatz' ? stop : `${stop}|${side}`;
 
         // Flattens an array ([[1,2],[3,4]] becomes [1,2,3,4])
         var flatten = (array) => [].concat.apply([], array);
@@ -427,21 +427,21 @@ d3.queue()
                 'Delft',
                 'Delft - Zuidpoort',
                 'Delft - Julianalaan',
-                'Delft - TU Aula',
-                'Delft - TU Mekelpark',
-                'Delft - TU S&C',
-                'Delft - TU Kluyverpark',
-                'Delft - TU Technopolis'
+                //'Delft - TU Aula',
+                //'Delft - TU Mekelpark',
+              //  'Delft - TU S&C',
+              //  'Delft - TU Kluyverpark',
+              //  'Delft - TU Technopolis'
             ],
             [
-                'Delft - Technopolis'
+                'Wendeplatz'
             ],
             [
-                'Delft - TU Technopolis',
-                'Delft - TU Kluyverpark',
-                'Delft - TU S&C',
-                'Delft - TU Mekelpark',
-                'Delft - TU Aula',
+              //  'Delft - TU Technopolis',
+              //  'Delft - TU Kluyverpark',
+              //  'Delft - TU S&C',
+              //  'Delft - TU Mekelpark',
+              //  'Delft - TU Aula',
                 'Delft - Julianalaan',
                 'Delft - Zuidpoort',
                 'Delft',

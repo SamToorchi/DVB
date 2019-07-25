@@ -13,12 +13,20 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"11:54:00"
+         },
+         {
+            "stop":"Wendeplatz",
+            "time":"12:00:00"
          }
       ]
    },
    {
       "trip_id":"45196489",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"13:00:00"
+         },
          {
             "stop":"Delft - Julianalaan",
             "time":"13:06:00"
@@ -36,6 +44,10 @@
    {
       "trip_id":"45195948",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"15:54:00"
+         },
          {
             "stop":"Delft - Julianalaan",
             "time":"16:01:00"
@@ -64,12 +76,21 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"15:48:00"
+         },
+         {
+            "stop":"Wendeplatz",
+            "time":"15:54:00"
          }
       ]
    },
    {
       "trip_id":"45196977",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"10:30:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"10:36:00"
@@ -98,12 +119,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"12:24:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"12:30:00"
          }
       ]
    },
    {
       "trip_id":"45195319",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"12:30:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"12:36:00"
@@ -132,6 +163,11 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"10:24:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"10:30:00"
          }
       ]
    },
@@ -149,6 +185,11 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"10:54:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"11:00:00"
          }
       ]
    },
@@ -166,12 +207,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"12:54:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"13:00:00"
          }
       ]
    },
    {
       "trip_id":"45195214",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"16:54:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"17:01:00"
@@ -200,12 +251,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"16:48:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"16:54:00"
          }
       ]
    },
    {
       "trip_id":"45197198",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"09:12:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"09:18:00"
@@ -223,6 +284,11 @@
    {
       "trip_id":"45195514",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"16:24:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"16:31:00"
@@ -251,6 +317,11 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"09:12:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"09:18:00"
          }
       ]
    },
@@ -268,6 +339,11 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"16:18:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"16:24:00"
          }
       ]
    },
@@ -285,12 +361,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"09:05:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"09:12:00"
          }
       ]
    },
    {
       "trip_id":"45195210",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"17:22:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"17:29:00"
@@ -319,6 +405,11 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"17:16:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"17:22:00"
          }
       ]
    },
@@ -336,12 +427,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"13:24:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"13:30:00"
          }
       ]
    },
    {
       "trip_id":"45196500",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"13:30:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"13:36:00"
@@ -370,12 +471,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"14:24:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"14:30:00"
          }
       ]
    },
    {
       "trip_id":"45194917",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"14:30:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"14:36:00"
@@ -404,12 +515,21 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"13:54:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"14:00:00"
          }
       ]
    },
    {
       "trip_id":"45194940",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"14:00:00"
+         },
          {
             "stop":"Delft - Julianalaan",
             "time":"14:06:00"
@@ -427,6 +547,11 @@
    {
       "trip_id":"45195138",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"07:57:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"08:03:00"
@@ -455,12 +580,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"07:50:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"07:57:00"
          }
       ]
    },
    {
       "trip_id":"45195212",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"17:09:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"17:16:00"
@@ -478,6 +613,11 @@
    {
       "trip_id":"45195219",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"17:39:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"17:46:00"
@@ -506,6 +646,11 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"17:03:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"17:09:00"
          }
       ]
    },
@@ -523,12 +668,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"17:33:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"17:39:00"
          }
       ]
    },
    {
       "trip_id":"45197000",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"09:40:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"09:46:00"
@@ -557,12 +712,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"19:24:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"19:30:00"
          }
       ]
    },
    {
       "trip_id":"45195542",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"19:30:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"19:36:00"
@@ -580,6 +745,11 @@
    {
       "trip_id":"45194631",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"14:45:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"14:51:00"
@@ -608,6 +778,11 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"15:18:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"15:24:00"
          }
       ]
    },
@@ -625,12 +800,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"14:39:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"14:45:00"
          }
       ]
    },
    {
       "trip_id":"45194907",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"14:15:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"14:21:00"
@@ -648,6 +833,11 @@
    {
       "trip_id":"45195943",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"15:24:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"15:31:00"
@@ -676,6 +866,11 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"14:09:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"14:15:00"
          }
       ]
    },
@@ -693,6 +888,11 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"08:28:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"08:35:00"
          }
       ]
    },
@@ -710,12 +910,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"08:35:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"08:42:00"
          }
       ]
    },
    {
       "trip_id":"45197190",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"08:42:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"08:48:00"
@@ -744,12 +954,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"09:34:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"09:40:00"
          }
       ]
    },
    {
       "trip_id":"45194937",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"15:00:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"15:06:00"
@@ -778,6 +998,11 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"14:54:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"15:00:00"
          }
       ]
    },
@@ -795,6 +1020,11 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"09:49:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"09:55:00"
          }
       ]
    },
@@ -812,6 +1042,11 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"07:20:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"07:27:00"
          }
       ]
    },
@@ -829,6 +1064,11 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"13:39:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"13:45:00"
          }
       ]
    },
@@ -846,12 +1086,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"06:54:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"07:00:00"
          }
       ]
    },
    {
       "trip_id":"45197643",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"07:00:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"07:06:00"
@@ -870,6 +1120,11 @@
       "trip_id":"45196984",
       "stops":[
          {
+            "stop":"Wendeplatz",
+            "time":"09:55:00"
+         },
+
+         {
             "stop":"Delft - Julianalaan",
             "time":"10:01:00"
          },
@@ -887,6 +1142,11 @@
       "trip_id":"45197620",
       "stops":[
          {
+            "stop":"Wendeplatz",
+            "time":"07:27:00"
+         },
+
+         {
             "stop":"Delft - Julianalaan",
             "time":"07:33:00"
          },
@@ -903,6 +1163,11 @@
    {
       "trip_id":"45196493",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"13:45:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"13:51:00"
@@ -931,6 +1196,11 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"10:34:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"10:40:00"
          }
       ]
    },
@@ -948,6 +1218,11 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"12:39:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"12:45:00"
          }
       ]
    },
@@ -965,12 +1240,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"13:09:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"13:15:00"
          }
       ]
    },
    {
       "trip_id":"45196482",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"13:15:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"13:21:00"
@@ -989,6 +1274,11 @@
       "trip_id":"45197754",
       "stops":[
          {
+            "stop":"Wendeplatz",
+            "time":"12:45:00"
+         },
+
+         {
             "stop":"Delft - Julianalaan",
             "time":"12:51:00"
          },
@@ -1006,6 +1296,11 @@
       "trip_id":"45195479",
       "stops":[
          {
+            "stop":"Wendeplatz",
+            "time":"19:00:00"
+         },
+
+         {
             "stop":"Delft - Julianalaan",
             "time":"19:06:00"
          },
@@ -1022,6 +1317,11 @@
    {
       "trip_id":"45195548",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"18:00:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"18:07:00"
@@ -1050,6 +1350,11 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"18:24:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"18:30:00"
          }
       ]
    },
@@ -1067,6 +1372,11 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"17:54:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"18:00:00"
          }
       ]
    },
@@ -1084,12 +1394,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"18:54:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"19:00:00"
          }
       ]
    },
    {
       "trip_id":"45195546",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"18:30:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"18:37:00"
@@ -1107,6 +1427,11 @@
    {
       "trip_id":"45197196",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"08:27:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"08:33:00"
@@ -1135,12 +1460,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"08:20:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"08:27:00"
          }
       ]
    },
    {
       "trip_id":"45196997",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"09:25:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"09:31:00"
@@ -1169,12 +1504,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"09:19:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"09:25:00"
          }
       ]
    },
    {
       "trip_id":"45197840",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"10:10:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"10:16:00"
@@ -1203,6 +1548,11 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"10:04:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"10:10:00"
          }
       ]
    },
@@ -1220,6 +1570,11 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"08:58:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"09:05:00"
          }
       ]
    },
@@ -1237,6 +1592,11 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"08:43:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"08:50:00"
          }
       ]
    },
@@ -1254,12 +1614,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"08:50:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"08:57:00"
          }
       ]
    },
    {
       "trip_id":"45197192",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"08:57:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"09:03:00"
@@ -1277,6 +1647,11 @@
    {
       "trip_id":"45194619",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"15:09:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"15:16:00"
@@ -1305,12 +1680,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"15:03:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"15:09:00"
          }
       ]
    },
    {
       "trip_id":"45195216",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"16:39:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"16:46:00"
@@ -1328,6 +1713,11 @@
    {
       "trip_id":"45195445",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"07:42:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"07:48:00"
@@ -1356,12 +1746,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"07:35:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"07:42:00"
          }
       ]
    },
    {
       "trip_id":"45197194",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"08:12:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"08:18:00"
@@ -1390,6 +1790,11 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"08:05:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"08:12:00"
          }
       ]
    },
@@ -1407,12 +1812,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"16:33:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"16:39:00"
          }
       ]
    },
    {
       "trip_id":"45195951",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"16:09:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"16:16:00"
@@ -1430,6 +1845,11 @@
    {
       "trip_id":"45195946",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"15:39:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"15:46:00"
@@ -1458,6 +1878,11 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"16:03:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"16:09:00"
          }
       ]
    },
@@ -1475,12 +1900,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"15:33:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"15:39:00"
          }
       ]
    },
    {
       "trip_id":"45196745",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"12:00:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"12:06:00"
@@ -1498,6 +1933,11 @@
    {
       "trip_id":"45195303",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"11:30:00"
+         },
+
          {
             "stop":"Delft - Julianalaan",
             "time":"11:36:00"
@@ -1526,12 +1966,22 @@
          {
             "stop":"Delft - Julianalaan",
             "time":"11:24:00"
+         },
+
+         {
+            "stop":"Wendeplatz",
+            "time":"11:30:00"
          }
       ]
    },
    {
       "trip_id":"45195313",
       "stops":[
+         {
+            "stop":"Wendeplatz",
+            "time":"11:00:00"
+         },
+         
          {
             "stop":"Delft - Julianalaan",
             "time":"11:06:00"
