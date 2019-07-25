@@ -35,10 +35,18 @@ function tripMouseOut(tripId) {
 
 // Load the input data asynchronously
 d3.queue()
+
+    .defer(d3.json, 'data/Trains.json')
+    .defer(d3.json, 'data/timetableVTN69.min.json')
+    .defer(d3.json, 'data/timetableRET40.min.json')
+    .defer(d3.json, 'data/timetableRET174.min.json')
+
+/*
     .defer(d3.json, 'data/Trains.json')
     .defer(d3.json, 'data/VTN69.json')
     .defer(d3.json, 'data/RET40.json')
     .defer(d3.json, 'data/RET174.json')
+    */
     .await((error, trainsData, vtn69Data, ret40Data, ret174Data) => {
     // Enrich bus datasets adding type to each trip, before concatenation
     vtn69Data = vtn69Data.map((t) => Object.assign(t, {type: 'vtn69'}));
@@ -69,7 +77,7 @@ d3.queue()
                 'Delft - TU S&C',
                 'Delft - TU Kluyverpark',
                 'Delft - TU Technopolis',
-                'Delft - Technopolis'
+                'Hauptbahnhof'
             ],
             [
                 'Löbtau',
@@ -106,7 +114,7 @@ d3.queue()
         // Scale for the train (x) axis (--> Map)
         var trainScale = d3.scalePoint()
         .domain(stops[1])
-        .range([0, height]);
+        .range([-70, height]);
 
         // The y position of the train axis, which corresponds
         // to the position of the 'Delft' stop
@@ -122,7 +130,7 @@ d3.queue()
         .call(busAxis)
         .attr('transform', `translate(0,${busAxisYPos})`);
 
-        // Set text properties for bus axis 
+        // Set text properties for bus axis
         busAxisEl.selectAll('text')
             .attr('y', 0)
             .attr('x', 9)
@@ -172,21 +180,33 @@ d3.queue()
         function renderMapAtTime(actualTime) {
             // Verifies if a trip is active at the current time
             function active(trip) {
+
+
+              if (trip.stops[0].stop == "Löbtau" | trip.stops[0].stop == "C.-D.-Friedrich Straße"){
                 if (parseTime(trip.stops[0].time) < parseTime(trip.stops[0].realtime)){
                     var startTime = parseTime(trip.stops[0].time);
+                    //var startTime = d3.timeMinute.offset(startTime, -1);
                 }
                 else{
                     var startTime = parseTime(trip.stops[0].realtime);
+                    var startTime = d3.timeMinute.offset(startTime, -1);
                 }
-                
-                if(parseTime(trip.stops[0].time) > parseTime(trip.stops[0].realtime)){
+/*
+                if(parseTime(trip.stops[trip.stops.length-1].time) > parseTime(trip.stops[trip.stops.length-1].realtime)){
                     var endTime = parseTime(trip.stops[trip.stops.length-1].time);
+                    //var endTime = d3.timeMinute.offset(endTime, -5);
                 }
                 else{
+                */
                     var endTime = parseTime(trip.stops[trip.stops.length-1].realtime);
-                }
-
+                    var endTime = d3.timeMinute.offset(endTime, -0.2);
                 
+              }
+
+              else{
+                var startTime = parseTime(trip.stops[0].time);
+                var endTime = parseTime(trip.stops[trip.stops.length-1].time);
+              }
 
                 return startTime < actualTime && actualTime < endTime;
             }
@@ -194,45 +214,45 @@ d3.queue()
             // Filter the bus and train trips to keep only those that are active
             // in this point in time
             var activeTrainTrips = trainsData.filter(active);
-            console.log('activeTrainTrips');
-            console.log(activeTrainTrips);
+
 
             var activeBusTrips = busData.filter(active);
+
 
             // Given a list of stops and a scale, computes the position
             // of the vehicle
             function getPosition(tripStopList, scale) {
-                i=0;
-                
+
+
+
+
                 // Find which was the last stop of this trip
-                for (var i = 0; i < tripStopList.length - 1; i++) {
-                    if (parseTime(tripStopList[i+1].time) > actualTime) break;
-                }
+          for (var i = 0; i < tripStopList.length - 1; i++) {
+            if (parseTime(tripStopList[i+1].time) > actualTime) break;
+          }
 
-                // Use interpolation to compute current position of the vehicle
-                var lastStop = tripStopList[i],
-                    nextStop = tripStopList[i+1],
-                    lastStopUnixTime = parseTime(lastStop.time).getTime(),
-                    currentUnixTime = actualTime.getTime(),
-                    nextStopUnixTime = parseTime(nextStop.time).getTime(),
-                    ratio = (currentUnixTime - lastStopUnixTime)/(nextStopUnixTime - lastStopUnixTime);
-                console.log("active coordinates:");
-                console.log(scale(lastStop.stop) + ratio * (scale(nextStop.stop) - scale(lastStop.stop)));    
+          // Use interpolation to compute current position of the vehicle
+          var lastStop = tripStopList[i],
+            nextStop = tripStopList[i+1],
+            lastStopUnixTime = parseTime(lastStop.time).getTime(),
+            currentUnixTime = actualTime.getTime(),
+            nextStopUnixTime = parseTime(nextStop.time).getTime(),
+            ratio = (currentUnixTime - lastStopUnixTime)/(nextStopUnixTime - lastStopUnixTime);
 
-                return scale(lastStop.stop) + ratio * (scale(nextStop.stop) - scale(lastStop.stop));
+          return scale(lastStop.stop) + ratio * (scale(nextStop.stop) - scale(lastStop.stop));
             }
 
 
             function getRealPosition(tripStopList, scale) {
                 // Find which was the last stop of this trip
-                var i = 0;
-                
+
+
                 for (var i = 0; i < tripStopList.length - 1; i++) {
                     if (parseTime(tripStopList[i+1].realtime) > actualTime) break;
                 }
-                
 
-                
+
+
                 // Use interpolation to compute current position of the vehicle
                 var lastStop = tripStopList[i],
                     nextStop = tripStopList[i+1],
@@ -240,8 +260,6 @@ d3.queue()
                     currentUnixTime = actualTime.getTime(),
                     nextStopUnixTime = parseTime(nextStop.realtime).getTime(),
                     ratio = (currentUnixTime - lastStopUnixTime)/(nextStopUnixTime - lastStopUnixTime);
-                console.log("real coordinates:");
-                console.log(scale(lastStop.stop) + ratio * (scale(nextStop.stop) - scale(lastStop.stop)));    
 
                 return scale(lastStop.stop) + ratio * (scale(nextStop.stop) - scale(lastStop.stop));
             }
@@ -250,12 +268,12 @@ d3.queue()
             var activeTrainPositions = activeTrainTrips.map((trip) => {
                 // Store the direction of the trip basing on the first stop
                 var direction = trip.stops[0].stop === 'C.-D.-Friedrich Straße' ? 'S' : 'N',
-                pos = getPosition(trip.stops, trainScale),
-                real_pos = getRealPosition(trip.stops, trainScale);
+                    pos = getPosition(trip.stops, trainScale),
+                    real_pos = getRealPosition(trip.stops, trainScale);
+
 
                 return {pos: pos, real_pos: real_pos, direction: direction, tripId: trip.trip_id};
             });
-            console.log(activeTrainPositions);
 
 
 
@@ -268,6 +286,7 @@ d3.queue()
 
                 return {pos: pos, direction: direction, tripId: trip.trip_id, type: trip.type};
             });
+
 
 
             // Bind the circle elements to the active train trips, using as key
@@ -294,7 +313,6 @@ d3.queue()
             for (const value of TrainPathCordinates) {
                 pos = value.pos;
                 real_pos = value.real_pos;
-                console.log(pos, real_pos); 
             }
 
 
@@ -387,7 +405,8 @@ d3.queue()
         // Flattens an array ([[1,2],[3,4]] becomes [1,2,3,4])
         var flatten = (array) => [].concat.apply([], array);
 
-        // List of the stops, divided in left, center and right
+        // List of the stops, divided in left, center and right,
+        // bold lines
         var stops = [
             [
                 'Löbtau',
@@ -421,7 +440,7 @@ d3.queue()
             ]
         ];
 
-        // Add '|A' to the stops to the left and '|B' to the stops to the right
+        // Add '|A' to the stops to the left and '|B' to the stops to the right side of string,
         // because D3 doesn't like duplicate values in the scales.
         var stopsDeduplicated = [
             stops[0].map(s => s + '|A'),
