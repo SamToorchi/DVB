@@ -36,17 +36,10 @@ function tripMouseOut(tripId) {
 // Load the input data asynchronously
 d3.queue()
 
-    .defer(d3.json, 'data/Trains.json')
-    .defer(d3.json, 'data/VTN69.json')
-    .defer(d3.json, 'data/RET40.json')
-    .defer(d3.json, 'data/RET174.json')
-
-/*
-    .defer(d3.json, 'data/Trains.json')
-    .defer(d3.json, 'data/VTN69.json')
-    .defer(d3.json, 'data/RET40.json')
-    .defer(d3.json, 'data/RET174.json')
-    */
+    .defer(d3.json, 'data/61.json')
+    .defer(d3.json, 'data/E63_1.json')
+    .defer(d3.json, 'data/E63_2.json')
+    .defer(d3.json, 'data/E63_3.json')
     .await((error, trainsData, vtn69Data, ret40Data, ret174Data) => {
     // Enrich bus datasets adding type to each trip, before concatenation
     vtn69Data = vtn69Data.map((t) => Object.assign(t, {type: 'vtn69'}));
@@ -69,14 +62,9 @@ d3.queue()
         // From top to bottom and left to right
         var stops = [
             [
-                'Delft',
-                'Delft - Zuidpoort',
-                'Delft - Julianalaan',
-              //  'Delft - TU Aula',
-            //    'Delft - TU Mekelpark',
-              //  'Delft - TU S&C',
-              //  'Delft - TU Kluyverpark',
-            //    'Delft - TU Technopolis',
+                'TU Dresden',
+                'Studentenwerk',
+                'Hauptbahnhof',
                 'Wendeplatz'
             ],
             [
@@ -84,7 +72,7 @@ d3.queue()
                 'Chemnitzer Straße',
                 'Bernhardstraße',
                 'Nürnberger Platz',
-                'Delft',
+                'TU Dresden',
                 'SLUB',
                 'Zellescher Weg',
                 'C.-D.-Friedrich Straße'
@@ -118,7 +106,7 @@ d3.queue()
 
         // The y position of the train axis, which corresponds
         // to the position of the 'Delft' stop
-        var busAxisYPos = trainScale('Delft');
+        var busAxisYPos = trainScale('TU Dresden');
 
         // D3 Axes
         var busAxis = d3.axisTop(busScale).tickSize(0),
@@ -231,7 +219,6 @@ d3.queue()
             currentUnixTime = actualTime.getTime();
 
             if(nextStop === undefined){
-              console.log("HAHAHA");
                 var nextStopUnixTime = d3.timeMinute.offset(lastStopUnixTime, 10);
                 var varnextStop = lastStop.stop;
             }
@@ -261,7 +248,6 @@ d3.queue()
                     lastStopUnixTime = parseTime(lastStop.realtime).getTime(),
                     currentUnixTime = actualTime.getTime();
                     if(nextStop === undefined){
-                      console.log("QQQQQQ");
                         var nextStopUnixTime = d3.timeMinute.offset(lastStopUnixTime, 2);
                         var varnextStop = lastStop.stop;
                     }
@@ -291,7 +277,7 @@ d3.queue()
             // Create an array with the position of each active bus trip
             var activeBusPositions = activeBusTrips.map((trip) => {
                 // Store the direction of the trip basing on the first stop
-                var direction = trip.stops[0].stop === 'Delft' ? 'E' : 'W',
+                var direction = trip.stops[0].stop === 'TU Dresden' ? 'E' : 'W',
                     pos = getPosition(trip.stops, busScale);
 
 
@@ -424,27 +410,17 @@ d3.queue()
                 'Chemnitzer Straße',
                 'Bernhardstraße',
                 'Nürnberger Platz',
-                'Delft',
-                'Delft - Zuidpoort',
-                'Delft - Julianalaan',
-                //'Delft - TU Aula',
-                //'Delft - TU Mekelpark',
-              //  'Delft - TU S&C',
-              //  'Delft - TU Kluyverpark',
-              //  'Delft - TU Technopolis'
+                'TU Dresden',
+                'Studentenwerk',
+                'Hauptbahnhof'
             ],
             [
                 'Wendeplatz'
             ],
             [
-              //  'Delft - TU Technopolis',
-              //  'Delft - TU Kluyverpark',
-              //  'Delft - TU S&C',
-              //  'Delft - TU Mekelpark',
-              //  'Delft - TU Aula',
-                'Delft - Julianalaan',
-                'Delft - Zuidpoort',
-                'Delft',
+                'Hauptbahnhof',
+                'Studentenwerk',
+                'TU Dresden',
                 'SLUB',
                 'Zellescher Weg',
                 'C.-D.-Friedrich Straße'
@@ -605,7 +581,7 @@ d3.queue()
                        .filter(s => stops[0].indexOf(s.stop) !== -1)
                        // Then we add the 'deduplicator' for the left stops ('|A')
                        // to the stop names
-                       .map(s => ({'time': s.time, 'stop': s.stop + '|A'})))
+                       .map(s => ({'time': s.realtime, 'stop': s.stop + '|A'})))
                  )
             .attr('data-trip-id', (t) => t.trip_id);
 
@@ -614,7 +590,7 @@ d3.queue()
             .attr('d', (t) =>
                   line(t.stops
                        .filter(s => stops[2].indexOf(s.stop) !== -1)
-                       .map(s => ({'time': s.time, 'stop': s.stop + '|B'})))
+                       .map(s => ({'time': s.realtime, 'stop': s.stop + '|B'})))
                  )
             .attr('data-trip-id', (t) => t.trip_id);
 
@@ -625,10 +601,10 @@ d3.queue()
             // stop names so that xScale knows what we're talking about
             var leftStops = t.stops
             .filter(s => stops[0].indexOf(s.stop) !== -1)
-            .map(s => ({'trip_id': t.trip_id, 'time': s.time, 'stop': s.stop + '|A'}));
+            .map(s => ({'trip_id': t.trip_id, 'time': s.realtime, 'stop': s.stop + '|A'}));
             var rightStops = t.stops
             .filter(s => stops[2].indexOf(s.stop) !== -1)
-            .map(s => ({'trip_id': t.trip_id, 'time': s.time, 'stop': s.stop + '|B'}));
+            .map(s => ({'trip_id': t.trip_id, 'time': s.realtime, 'stop': s.stop + '|B'}));
             return leftStops.concat(rightStops);
         })
             .enter().append('circle')

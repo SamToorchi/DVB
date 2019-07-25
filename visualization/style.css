@@ -11,7 +11,7 @@ svg {
 
 /* Use darker color for the important stops in Marey */
 #marey .x.axis g:nth-child(6) line,
-#marey .x.axis g:nth-child(14) line,
+#marey .x.axis g:nth-child(12) line,
 #marey .x.axis g:nth-child(22) line {
   stroke: black;
 }
