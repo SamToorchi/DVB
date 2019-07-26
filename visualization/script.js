@@ -407,7 +407,7 @@ d3.queue()
     // Marey diagram
     function test(userinput, hoffe) {
 
-      console.log(typeof hoffe);
+      //console.log(typeof hoffe);
       // Constants for the Marey diagram
       const marey_height = 15000,
         yaxis_minutes_interval = 10,

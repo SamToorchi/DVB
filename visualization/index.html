@@ -42,7 +42,7 @@
       for (j = 0; j < userinput.length; j++) {
         if (userinput[j].checked) {
           txtstring = txtstring + userinput[j].value + "";
-          console.log(txtstring);
+          //console.log(txtstring);
           var event = new CustomEvent('communication', {
             detail: txtstring
           })
