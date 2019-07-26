@@ -12,7 +12,7 @@ Die Daten bestehen aus 2 Kategorien:
 
 * **tatsächliche Ankunftzeit der Busse Linie 61 und 63 DVB Dresden (selbstständig ausgewertet)**
 
-* **planmäßige Ankunftzeit der Busse Linie 61 und 63 DVB Dresden (Quelle: DVB Dresden - [VVO/DVB](http://www.vvo-online.de/fahrplan)**
+* **planmäßige Ankunftzeit der Busse Linie 61 und 63 DVB Dresden (Quelle: DVB Dresden - [VVO/DVB](http://www.vvo-online.de/fahrplan))**
 
 
 
