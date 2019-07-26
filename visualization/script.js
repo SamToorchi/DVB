@@ -2,49 +2,55 @@
 
 // Dynamic width of Marey (left side Visualization) and Map (right side Visualization)
 const window_width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
-      window_height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight,
-      marey_width = window_width * (2/3) - 20,
-      map_width = window_width * (1/3);
+  window_height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight,
+  marey_width = window_width * (2 / 3) - 20,
+  map_width = window_width * (1 / 3);
 
 // Global constants for Stylesheet rules (Defualts and changed)
 const default_circle_radius = 3,
-      augmented_circle_radius = 6,
-      default_trippath_thickness = '1px',
-      augmented_trippath_thickness = '3px';
+  augmented_circle_radius = 6,
+  default_trippath_thickness = '1px',
+  augmented_trippath_thickness = '3px';
 
 // Time parser for the input data
 var parseTime = d3.timeParse('%H:%M:%S');
 
 // Handle mouse over a trip event
 function tripMouseOver(tripId) {
-    d3.selectAll(`path[data-trip-id='${tripId}']`)
-        .style('stroke-width', augmented_trippath_thickness);
+  d3.selectAll(`path[data-trip-id='${tripId}']`)
+    .style('stroke-width', augmented_trippath_thickness);
 
-    d3.selectAll(`circle[data-trip-id='${tripId}']`)
-        .style('r', augmented_circle_radius);
+  d3.selectAll(`circle[data-trip-id='${tripId}']`)
+    .style('r', augmented_circle_radius);
 }
 
 // Handle mouse out of a trip event
 function tripMouseOut(tripId) {
-    d3.selectAll(`path[data-trip-id='${tripId}']`)
-        .style('stroke-width', default_trippath_thickness);
+  d3.selectAll(`path[data-trip-id='${tripId}']`)
+    .style('stroke-width', default_trippath_thickness);
 
-    d3.selectAll(`circle[data-trip-id='${tripId}']`)
-        .style('r', default_circle_radius);
+  d3.selectAll(`circle[data-trip-id='${tripId}']`)
+    .style('r', default_circle_radius);
 }
 
 // Load the input data asynchronously
 d3.queue()
 
-    .defer(d3.json, 'data/61.json')
-    .defer(d3.json, 'data/E63_1.json')
-    .defer(d3.json, 'data/E63_2.json')
-    .defer(d3.json, 'data/E63_3.json')
-    .await((error, trainsData, vtn69Data, ret40Data, ret174Data) => {
+  .defer(d3.json, 'data/61.json')
+  .defer(d3.json, 'data/E63_1.json')
+  .defer(d3.json, 'data/E63_2.json')
+  .defer(d3.json, 'data/E63_3.json')
+  .await((error, trainsData, vtn69Data, ret40Data, ret174Data) => {
     // Enrich bus datasets adding type to each trip, before concatenation
-    vtn69Data = vtn69Data.map((t) => Object.assign(t, {type: 'vtn69'}));
-    ret40Data = ret40Data.map((t) => Object.assign(t, {type: 'ret40'}));
-    ret174Data = ret174Data.map((t) => Object.assign(t, {type: 'ret174'}));
+    vtn69Data = vtn69Data.map((t) => Object.assign(t, {
+      type: 'vtn69'
+    }));
+    ret40Data = ret40Data.map((t) => Object.assign(t, {
+      type: 'ret40'
+    }));
+    ret174Data = ret174Data.map((t) => Object.assign(t, {
+      type: 'ret174'
+    }));
 
     // Concatenate all bus data in a single array
     var busData = vtn69Data.concat(ret40Data, ret174Data);
@@ -54,38 +60,43 @@ d3.queue()
 
     // Interactive map
     (function() {
-        // Constants for the map
-        const map_height = map_width,
-              trips_spacing = 6;
+      // Constants for the map
+      const map_height = map_width,
+        trips_spacing = 6;
 
-        // List of stops divided in bus [0] and train [1] stops
-        // From top to bottom and left to right
-        var stops = [
-            [
-                'TU Dresden',
-                'Studentenwerk',
-                'Hauptbahnhof',
-                'Wendeplatz'
-            ],
-            [
-                'Löbtau',
-                'Chemnitzer Straße',
-                'Bernhardstraße',
-                'Nürnberger Platz',
-                'TU Dresden',
-                'SLUB',
-                'Zellescher Weg',
-                'C.-D.-Friedrich Straße'
-            ]
-        ];
+      // List of stops divided in bus [0] and train [1] stops
+      // From top to bottom and left to right
+      var stops = [
+        [
+          'TU Dresden',
+          'Studentenwerk',
+          'Hauptbahnhof',
+          'Wendeplatz'
+        ],
+        [
+          'Löbtau',
+          'Chemnitzer Straße',
+          'Bernhardstraße',
+          'Nürnberger Platz',
+          'TU Dresden',
+          'SLUB',
+          'Zellescher Weg',
+          'C.-D.-Friedrich Straße'
+        ]
+      ];
 
-        // D3 margin convention
-        var margin = {top: 120, right: 20, bottom: 20, left: 120},
-            width = map_width - margin.left - margin.right,
-            height = map_height - margin.top - margin.bottom;
+      // D3 margin convention
+      var margin = {
+          top: 120,
+          right: 20,
+          bottom: 20,
+          left: 120
+        },
+        width = map_width - margin.left - margin.right,
+        height = map_height - margin.top - margin.bottom;
 
-        // Create main map SVG element applying the margins
-        var svg = d3.select('body').append('svg')
+      // Create main map SVG element applying the margins
+      var svg = d3.select('body').append('svg')
         .attr('id', 'map')
         .style('margin-top', `-${map_height/2}px`)
         .style('left', `${marey_width}px`)
@@ -94,562 +105,619 @@ d3.queue()
         .append('g')
         .attr('transform', `translate(${margin.left},${margin.top})`);
 
-        // Scale for the the bus (y) axis (--> Map)
-        var busScale = d3.scalePoint()
+      // Scale for the the bus (y) axis (--> Map)
+      var busScale = d3.scalePoint()
         .domain(stops[0])
         .range([0, width]);
 
-        // Scale for the train (x) axis (--> Map)
-        var trainScale = d3.scalePoint()
+      // Scale for the train (x) axis (--> Map)
+      var trainScale = d3.scalePoint()
         .domain(stops[1])
         .range([-70, height]);
 
-        // The y position of the train axis, which corresponds
-        // to the position of the 'Delft' stop
-        var busAxisYPos = trainScale('TU Dresden');
+      // The y position of the train axis, which corresponds
+      // to the position of the 'Delft' stop
+      var busAxisYPos = trainScale('TU Dresden');
 
-        // D3 Axes
-        var busAxis = d3.axisTop(busScale).tickSize(0),
-            trainAxis = d3.axisLeft(trainScale).tickSize(0);
+      // D3 Axes
+      var busAxis = d3.axisTop(busScale).tickSize(0),
+        trainAxis = d3.axisLeft(trainScale).tickSize(0);
 
-        // Bus axis SVG element (horizontal)
-        var busAxisEl = svg.append('g')
+      // Bus axis SVG element (horizontal)
+      var busAxisEl = svg.append('g')
         .attr('class', 'bus axis')
         .call(busAxis)
         .attr('transform', `translate(0,${busAxisYPos})`);
 
-        // Set text properties for bus axis
-        busAxisEl.selectAll('text')
-            .attr('y', 0)
-            .attr('x', 9)
-            .attr('dy', '.35em');
+      // Set text properties for bus axis
+      busAxisEl.selectAll('text')
+        .attr('y', 0)
+        .attr('x', 9)
+        .attr('dy', '.35em');
 
-        // Place circles as ticks (css Class) in bus axis
-        busAxisEl.selectAll('.tick')
-            .each(function() {
-            d3.select(this)
-                .append('circle')
-                .attr('r', default_circle_radius);
+      // Place circles as ticks (css Class) in bus axis
+      busAxisEl.selectAll('.tick')
+        .each(function() {
+          d3.select(this)
+            .append('circle')
+            .attr('r', default_circle_radius);
         });
 
-        // Train axis SVG element (vertical)
-        var trainAxisEl = svg.append('g')
+      // Train axis SVG element (vertical)
+      var trainAxisEl = svg.append('g')
         .attr('class', 'train axis')
         .call(trainAxis);
 
-        // Space labels of train axis
-        trainAxisEl.selectAll('text')
-            .attr('x', -15);
+      // Space labels of train axis
+      trainAxisEl.selectAll('text')
+        .attr('x', -15);
 
-        // Place circles as ticks (css Class) in train axis
-        trainAxisEl.selectAll('.tick')
-            .each(function() {
-            d3.select(this)
-                .append('circle')
-                .attr('r', default_circle_radius)
+      // Place circles as ticks (css Class) in train axis
+      trainAxisEl.selectAll('.tick')
+        .each(function() {
+          d3.select(this)
+            .append('circle')
+            .attr('r', default_circle_radius)
         });
 
 
-        // SVG group in which we place the train elements (group of circles)
-        var trainsGroup = svg.append('g')
+      // SVG group in which we place the train elements (group of circles)
+      var trainsGroup = svg.append('g')
         .attr('class', 'trains');
 
-        // SVG group in which we place the bus elements (group of circles)
-        var busGroup = svg.append('g')
+      // SVG group in which we place the bus elements (group of circles)
+      var busGroup = svg.append('g')
         .attr('class', 'buses');
 
 
-        var trainDifference = svg.append('g')
+      var trainDifference = svg.append('g')
         .attr('class', 'train_difference');
 
 
-        // Given a time as Date object, renders the map corresponding
-        // to that point in time
-        function renderMapAtTime(actualTime) {
-            // Verifies if a trip is active at the current time
-            function active(trip) {
+      // Given a time as Date object, renders the map corresponding
+      // to that point in time
+      function renderMapAtTime(actualTime) {
+        // Verifies if a trip is active at the current time
+        function active(trip) {
 
 
-              if (trip.stops[0].stop == "Löbtau" | trip.stops[0].stop == "C.-D.-Friedrich Straße"){
-                if (parseTime(trip.stops[0].time) < parseTime(trip.stops[0].realtime)){
-                    var startTime = parseTime(trip.stops[0].time);
-                }
-                else{
-                    var startTime = parseTime(trip.stops[0].realtime);
-                    var startTime = d3.timeMinute.offset(startTime, -1);
-                }
-
-                    var endTime = parseTime(trip.stops[trip.stops.length-1].realtime);
-                    var endTime = d3.timeSecond.offset(endTime, 20);
-
-              }
-
-              else{
-                var startTime = parseTime(trip.stops[0].time);
-                var endTime = parseTime(trip.stops[trip.stops.length-1].time);
-              }
-
-                return startTime < actualTime && actualTime < endTime;
+          if (trip.stops[0].stop == "Löbtau" | trip.stops[0].stop == "C.-D.-Friedrich Straße") {
+            if (parseTime(trip.stops[0].time) < parseTime(trip.stops[0].realtime)) {
+              var startTime = parseTime(trip.stops[0].time);
+            } else {
+              var startTime = parseTime(trip.stops[0].realtime);
+              var startTime = d3.timeMinute.offset(startTime, -1);
             }
 
-            // Filter the bus and train trips to keep only those that are active
-            // in this point in time
-            var activeTrainTrips = trainsData.filter(active);
+            var endTime = parseTime(trip.stops[trip.stops.length - 1].realtime);
+            var endTime = d3.timeSecond.offset(endTime, 20);
+
+          } else {
+            var startTime = parseTime(trip.stops[0].time);
+            var endTime = parseTime(trip.stops[trip.stops.length - 1].time);
+          }
+
+          return startTime < actualTime && actualTime < endTime;
+        }
+
+        // Filter the bus and train trips to keep only those that are active
+        // in this point in time
+        var activeTrainTrips = trainsData.filter(active);
 
 
-            var activeBusTrips = busData.filter(active);
+        var activeBusTrips = busData.filter(active);
 
 
-            // Given a list of stops and a scale, computes the position
-            // of the vehicle
-            function getPosition(tripStopList, scale) {
+        // Given a list of stops and a scale, computes the position
+        // of the vehicle
+        function getPosition(tripStopList, scale) {
 
 
 
 
-                // Find which was the last stop of this trip
+          // Find which was the last stop of this trip
           for (var i = 0; i < tripStopList.length - 1; i++) {
-            if (parseTime(tripStopList[i+1].time) > actualTime) break;
+            if (parseTime(tripStopList[i + 1].time) > actualTime) break;
           }
 
           // Use interpolation to compute current position of the vehicle
           var lastStop = tripStopList[i],
-            nextStop = tripStopList[i+1],
+            nextStop = tripStopList[i + 1],
             lastStopUnixTime = parseTime(lastStop.time).getTime(),
             currentUnixTime = actualTime.getTime();
 
-            if(nextStop === undefined){
-                var nextStopUnixTime = d3.timeMinute.offset(lastStopUnixTime, 10);
-                var varnextStop = lastStop.stop;
-            }
-            else{
-              var nextStopUnixTime = parseTime(nextStop.time).getTime();
-              var varnextStop = nextStop.stop;
-            }
-            ratio = (currentUnixTime - lastStopUnixTime)/(nextStopUnixTime - lastStopUnixTime);
+          if (nextStop === undefined) {
+            var nextStopUnixTime = d3.timeMinute.offset(lastStopUnixTime, 10);
+            var varnextStop = lastStop.stop;
+          } else {
+            var nextStopUnixTime = parseTime(nextStop.time).getTime();
+            var varnextStop = nextStop.stop;
+          }
+          ratio = (currentUnixTime - lastStopUnixTime) / (nextStopUnixTime - lastStopUnixTime);
 
           return scale(lastStop.stop) + ratio * (scale(varnextStop) - scale(lastStop.stop));
-            }
-
-
-            function getRealPosition(tripStopList, scale) {
-                // Find which was the last stop of this trip
-
-
-                for (var i = 0; i < tripStopList.length - 1; i++) {
-                    if (parseTime(tripStopList[i+1].realtime) > actualTime) break;
-                }
-
-
-
-                // Use interpolation to compute current position of the vehicle
-                var lastStop = tripStopList[i],
-                    nextStop = tripStopList[i+1],
-                    lastStopUnixTime = parseTime(lastStop.realtime).getTime(),
-                    currentUnixTime = actualTime.getTime();
-                    if(nextStop === undefined){
-                        var nextStopUnixTime = d3.timeMinute.offset(lastStopUnixTime, 2);
-                        var varnextStop = lastStop.stop;
-                    }
-                    else{
-                      var nextStopUnixTime = parseTime(nextStop.realtime).getTime();
-                      var varnextStop = nextStop.stop;
-                    }
-
-                    ratio = (currentUnixTime - lastStopUnixTime)/(nextStopUnixTime - lastStopUnixTime);
-
-                return scale(lastStop.stop) + ratio * (scale(varnextStop) - scale(lastStop.stop));
-            }
-
-            // Create an array with the position of each active train trip
-            var activeTrainPositions = activeTrainTrips.map((trip) => {
-                // Store the direction of the trip basing on the first stop
-                var direction = trip.stops[0].stop === 'C.-D.-Friedrich Straße' ? 'S' : 'N',
-                    pos = getPosition(trip.stops, trainScale),
-                    real_pos = getRealPosition(trip.stops, trainScale);
-
-
-                return {pos: pos, real_pos: real_pos, direction: direction, tripId: trip.trip_id};
-            });
-
-
-
-            // Create an array with the position of each active bus trip
-            var activeBusPositions = activeBusTrips.map((trip) => {
-                // Store the direction of the trip basing on the first stop
-                var direction = trip.stops[0].stop === 'TU Dresden' ? 'E' : 'W',
-                    pos = getPosition(trip.stops, busScale);
-
-
-                return {pos: pos, direction: direction, tripId: trip.trip_id, type: trip.type};
-            });
-
-
-
-            // Bind the circle elements to the active train trips, using as key
-            // both the positions and the direction of the train
-            var trains = trainsGroup.selectAll('.trains circle')
-            .data(activeTrainPositions, (p) => `${p.pos}|${p.direction}|${p.real_pos}`);
-
-            /*
-            var trainsRealTime = trainsGroup.selectAll('.trains circle')
-            .data(activeTrainPositions, (q) => `${q.direction}|${q.real_pos}`);
-            */
-
-            //bind the line element to the active train trips
-            var erzeuge = trainDifference.selectAll('.train_difference line')
-            .data(activeTrainPositions, (p) => `${p.pos}|${p.direction}|${p.real_pos}`);
-
-            var trainsRealTime = trainDifference.selectAll('.train_difference circle')
-            .data(activeTrainPositions, (q) => `${q.direction}|${q.real_pos}`);
-
-
-
-            //get SVG coordinates from every Array
-            var TrainPathCordinates = activeTrainPositions.values();
-            for (const value of TrainPathCordinates) {
-                pos = value.pos;
-                real_pos = value.real_pos;
-            }
-
-
-            //create line between circles
-            erzeuge.enter().append('line')
-                .attr('x1', (p) => p.direction === 'N' ? trips_spacing : -trips_spacing)
-                .attr('x2', (p) => p.direction === 'N' ? trips_spacing : -trips_spacing)
-                .attr('y1', (p) => p.pos)
-                .attr('y2', (p) => p.real_pos)
-                .attr('stroke', 'red')
-                .attr("stroke-width", "1")
-                .attr('fill', 'black');
-            erzeuge.exit().remove();
-
-            // Enter event for the train trips.
-            // Basing on the direction we choose a different visual offset
-            // for the circle
-            trains.enter().append('circle')
-                .attr('r', default_circle_radius)
-                .attr('data-trip-id', (p) => p.tripId)
-                .attr('cx', (p) => p.direction === 'N' ? trips_spacing : -trips_spacing)
-                .attr('cy', (p) => p.pos);
-
-
-            // Exit event for the train trips
-            trains.exit().remove();
-
-            //create circles for real time
-            trainsRealTime.enter().append('circle')
-                .attr('r', default_circle_radius)
-                .attr('data-trip-id', (q) => q.tripId)
-                .attr('cx', (q) => q.direction === 'N' ? trips_spacing : -trips_spacing)
-                .attr('cy', (q) => q.real_pos)
-                .attr('fill', 'red')
-                .attr('stroke-width', '2')
-                .attr('stroke', 'red');
-
-
-            // Exit event for the train trips
-            trainsRealTime.exit().remove();
-
-            // Bind the circle elements to the active bus trips, using as key
-            // both the position and the direction of the bus
-            var buses = busGroup.selectAll('.buses circle')
-            .data(activeBusPositions, (p) => `${p.pos}|${p.direction}`);
-
-            // Enter event for the bus trips.
-            // Add the type of the trip as class so we can colour them differently
-            buses.enter().append('circle')
-                .attr('r', default_circle_radius)
-                .attr('data-trip-id', (p) => p.tripId)
-                .attr('class', (p) => p.type)
-                .attr('cx', (p) => p.pos)
-                .attr('cy', (p) => p.direction === 'W' ? busAxisYPos-trips_spacing : busAxisYPos+trips_spacing);
-
-            // Exit event for the bus trips
-            buses.exit().remove();
-
-            // Attach the trip mouseover and mouseout handlers to all the
-            // circles representing the vehichles
-            svg.selectAll('.trains circle, .buses circle')
-                .on('mouseover', (p) => tripMouseOver(p.tripId))
-                .on('mouseout', (p) => tripMouseOut(p.tripId));
         }
-        /*******************************************/
+
+
+        function getRealPosition(tripStopList, scale) {
+          // Find which was the last stop of this trip
+
+
+          for (var i = 0; i < tripStopList.length - 1; i++) {
+            if (parseTime(tripStopList[i + 1].realtime) > actualTime) break;
+          }
+
+
+
+          // Use interpolation to compute current position of the vehicle
+          var lastStop = tripStopList[i],
+            nextStop = tripStopList[i + 1],
+            lastStopUnixTime = parseTime(lastStop.realtime).getTime(),
+            currentUnixTime = actualTime.getTime();
+          if (nextStop === undefined) {
+            var nextStopUnixTime = d3.timeMinute.offset(lastStopUnixTime, 2);
+            var varnextStop = lastStop.stop;
+          } else {
+            var nextStopUnixTime = parseTime(nextStop.realtime).getTime();
+            var varnextStop = nextStop.stop;
+          }
+
+          ratio = (currentUnixTime - lastStopUnixTime) / (nextStopUnixTime - lastStopUnixTime);
+
+          return scale(lastStop.stop) + ratio * (scale(varnextStop) - scale(lastStop.stop));
+        }
+
+        // Create an array with the position of each active train trip
+        var activeTrainPositions = activeTrainTrips.map((trip) => {
+          // Store the direction of the trip basing on the first stop
+          var direction = trip.stops[0].stop === 'C.-D.-Friedrich Straße' ? 'S' : 'N',
+            pos = getPosition(trip.stops, trainScale),
+            real_pos = getRealPosition(trip.stops, trainScale);
+
+
+          return {
+            pos: pos,
+            real_pos: real_pos,
+            direction: direction,
+            tripId: trip.trip_id
+          };
+        });
+
+
+
+        // Create an array with the position of each active bus trip
+        var activeBusPositions = activeBusTrips.map((trip) => {
+          // Store the direction of the trip basing on the first stop
+          var direction = trip.stops[0].stop === 'TU Dresden' ? 'E' : 'W',
+            pos = getPosition(trip.stops, busScale);
+
+
+          return {
+            pos: pos,
+            direction: direction,
+            tripId: trip.trip_id,
+            type: trip.type
+          };
+        });
+
+
+
+        // Bind the circle elements to the active train trips, using as key
+        // both the positions and the direction of the train
+        var trains = trainsGroup.selectAll('.trains circle')
+          .data(activeTrainPositions, (p) => `${p.pos}|${p.direction}|${p.real_pos}`);
+
+        /*
+        var trainsRealTime = trainsGroup.selectAll('.trains circle')
+        .data(activeTrainPositions, (q) => `${q.direction}|${q.real_pos}`);
+        */
+
+        //bind the line element to the active train trips
+        var erzeuge = trainDifference.selectAll('.train_difference line')
+          .data(activeTrainPositions, (p) => `${p.pos}|${p.direction}|${p.real_pos}`);
+
+        var trainsRealTime = trainDifference.selectAll('.train_difference circle')
+          .data(activeTrainPositions, (q) => `${q.direction}|${q.real_pos}`);
+
+
+
+        //get SVG coordinates from every Array
+        var TrainPathCordinates = activeTrainPositions.values();
+        for (const value of TrainPathCordinates) {
+          pos = value.pos;
+          real_pos = value.real_pos;
+        }
+
+
+        //create line between circles
+        erzeuge.enter().append('line')
+          .attr('x1', (p) => p.direction === 'N' ? trips_spacing : -trips_spacing)
+          .attr('x2', (p) => p.direction === 'N' ? trips_spacing : -trips_spacing)
+          .attr('y1', (p) => p.pos)
+          .attr('y2', (p) => p.real_pos)
+          .attr('stroke', 'red')
+          .attr("stroke-width", "1")
+          .attr('fill', 'black');
+        erzeuge.exit().remove();
+
+        // Enter event for the train trips.
+        // Basing on the direction we choose a different visual offset
+        // for the circle
+        trains.enter().append('circle')
+          .attr('r', default_circle_radius)
+          .attr('data-trip-id', (p) => p.tripId)
+          .attr('cx', (p) => p.direction === 'N' ? trips_spacing : -trips_spacing)
+          .attr('cy', (p) => p.pos);
+
+
+        // Exit event for the train trips
+        trains.exit().remove();
+
+        //create circles for real time
+        trainsRealTime.enter().append('circle')
+          .attr('r', default_circle_radius)
+          .attr('data-trip-id', (q) => q.tripId)
+          .attr('cx', (q) => q.direction === 'N' ? trips_spacing : -trips_spacing)
+          .attr('cy', (q) => q.real_pos)
+          .attr('fill', 'red')
+          .attr('stroke-width', '2')
+          .attr('stroke', 'red');
+
+
+        // Exit event for the train trips
+        trainsRealTime.exit().remove();
+
+        // Bind the circle elements to the active bus trips, using as key
+        // both the position and the direction of the bus
+        var buses = busGroup.selectAll('.buses circle')
+          .data(activeBusPositions, (p) => `${p.pos}|${p.direction}`);
+
+        // Enter event for the bus trips.
+        // Add the type of the trip as class so we can colour them differently
+        buses.enter().append('circle')
+          .attr('r', default_circle_radius)
+          .attr('data-trip-id', (p) => p.tripId)
+          .attr('class', (p) => p.type)
+          .attr('cx', (p) => p.pos)
+          .attr('cy', (p) => p.direction === 'W' ? busAxisYPos - trips_spacing : busAxisYPos + trips_spacing);
+
+        // Exit event for the bus trips
+        buses.exit().remove();
+
+        // Attach the trip mouseover and mouseout handlers to all the
+        // circles representing the vehichles
+        svg.selectAll('.trains circle, .buses circle')
+          .on('mouseover', (p) => tripMouseOver(p.tripId))
+          .on('mouseout', (p) => tripMouseOut(p.tripId));
+      }
+      /*******************************************/
 
 
 
 
-        // Create a global Map object exposing the render function,
-        // so that we can call it outside of the IIFE
-        Map = {renderMapAtTime: renderMapAtTime};
+      // Create a global Map object exposing the render function,
+      // so that we can call it outside of the IIFE
+      Map = {
+        renderMapAtTime: renderMapAtTime
+      };
     }());
 
+
+
     // Marey diagram
-    (function() {
-        // Constants for the Marey diagram
-        const marey_height = 15000,
-              yaxis_minutes_interval = 10,
-              start_time = '05:00:00',
-              end_time = '25:45:00',
-              default_timeline_time = '05:01:00';
+    function test(userinput, hoffe) {
 
-        // Used to remove the 'deduplicator' at the end of the stop name, if present
-        var realStopName = (stop) => stop.indexOf('|') === -1 ? stop : stop.substring(0, stop.length-2);
+      console.log(typeof hoffe);
+      // Constants for the Marey diagram
+      const marey_height = 15000,
+        yaxis_minutes_interval = 10,
+        start_time = '05:00:00',
+        end_time = '25:45:00',
+        default_timeline_time = '05:01:00';
 
-        // Used to get the 'deduplicated' bus stop name
-        var deduplicatedBusStop = (stop, side) => stop === 'Wendeplatz' ? stop : `${stop}|${side}`;
+      // Used to remove the 'deduplicator' at the end of the stop name, if present
+      var realStopName = (stop) => stop.indexOf('|') === -1 ? stop : stop.substring(0, stop.length - 2);
 
-        // Flattens an array ([[1,2],[3,4]] becomes [1,2,3,4])
-        var flatten = (array) => [].concat.apply([], array);
+      // Used to get the 'deduplicated' bus stop name
+      var deduplicatedBusStop = (stop, side) => stop === 'Wendeplatz' ? stop : `${stop}|${side}`;
 
-        // List of the stops, divided in left, center and right,
-        // bold lines
-        var stops = [
-            [
-                'Löbtau',
-                'Chemnitzer Straße',
-                'Bernhardstraße',
-                'Nürnberger Platz',
-                'TU Dresden',
-                'Studentenwerk',
-                'Hauptbahnhof'
-            ],
-            [
-                'Wendeplatz'
-            ],
-            [
-                'Hauptbahnhof',
-                'Studentenwerk',
-                'TU Dresden',
-                'SLUB',
-                'Zellescher Weg',
-                'C.-D.-Friedrich Straße'
-            ]
-        ];
+      // Flattens an array ([[1,2],[3,4]] becomes [1,2,3,4])
+      var flatten = (array) => [].concat.apply([], array);
 
-        // Add '|A' to the stops to the left and '|B' to the stops to the right side of string,
-        // because D3 doesn't like duplicate values in the scales.
-        var stopsDeduplicated = [
-            stops[0].map(s => s + '|A'),
-            stops[1],
-            stops[2].map(s => s + '|B')
-        ];
+      // List of the stops, divided in left, center and right,
+      // bold lines
+      var stops = [
+        [
+          'Löbtau',
+          'Chemnitzer Straße',
+          'Bernhardstraße',
+          'Nürnberger Platz',
+          'TU Dresden',
+          'Studentenwerk',
+          'Hauptbahnhof'
+        ],
+        [
+          'Wendeplatz'
+        ],
+        [
+          'Hauptbahnhof',
+          'Studentenwerk',
+          'TU Dresden',
+          'SLUB',
+          'Zellescher Weg',
+          'C.-D.-Friedrich Straße'
+        ]
+      ];
 
-        // Flatten the array with the stop names to use it as the x axis values
-        var stopsDeduplicatedFlattened = flatten(stopsDeduplicated);
+      // Add '|A' to the stops to the left and '|B' to the stops to the right side of string,
+      // because D3 doesn't like duplicate values in the scales.
+      var stopsDeduplicated = [
+        stops[0].map(s => s + '|A'),
+        stops[1],
+        stops[2].map(s => s + '|B')
+      ];
 
-        // Time formatting for the y axis
-        var formatAxisTime = d3.timeFormat('%H:%M');
+      // Flatten the array with the stop names to use it as the x axis values
+      var stopsDeduplicatedFlattened = flatten(stopsDeduplicated);
 
-        // Time formatting for the timeline tooltip
-        var formatTimelineTime = d3.timeFormat('%H:%M:%S');
+      // Time formatting for the y axis
+      var formatAxisTime = d3.timeFormat('%H:%M');
 
-        // D3 margin convention
-        var margin = {top: 120, right: 40, bottom: 20, left: 40},
-            width = marey_width - margin.left - margin.right,
-            height = marey_height - margin.top - margin.bottom;
+      // Time formatting for the timeline tooltip
+      var formatTimelineTime = d3.timeFormat('%H:%M:%S');
 
-        // Create main SVG element applying the margins
-        var svg = d3.select('body').append('svg')
+      // D3 margin convention
+      var margin = {
+          top: 120,
+          right: 40,
+          bottom: 20,
+          left: 40
+        },
+        width = marey_width - margin.left - margin.right,
+        height = marey_height - margin.top - margin.bottom;
+
+      // Create main SVG element applying the margins
+      var svg = d3.select('body').append('svg')
         .attr('id', 'marey')
         .attr('width', width + margin.left + margin.right)
         .attr('height', height + margin.top + margin.bottom)
         .append('g')
         .attr('transform', `translate(${margin.left},${margin.top})`);
 
-        // Create clip path so we're sure we don't draw out of the canvas
-        // Add 5px from both the sides so that the circles can be seen fully
-        svg.append('defs').append('clipPath')
-            .attr('id', 'clip')
-            .append('rect')
-            .attr('x', -10)
-            .attr('width', width+20)
-            .attr('height', height);
+      // Create clip path so we're sure we don't draw out of the canvas
+      // Add 5px from both the sides so that the circles can be seen fully
+      svg.append('defs').append('clipPath')
+        .attr('id', 'clip')
+        .append('rect')
+        .attr('x', -10)
+        .attr('width', width + 20)
+        .attr('height', height);
 
-        // Create scale for x values (stops) using flattened array of deduplicated stops
-        var xScale = d3.scalePoint()
+      // Create scale for x values (stops) using flattened array of deduplicated stops
+      var xScale = d3.scalePoint()
         .domain(stopsDeduplicatedFlattened)
         .range([0, width]);
 
-        // Create scale for y values (time) using the specified start and end time
-        var yScale = d3.scaleTime()
+      // Create scale for y values (time) using the specified start and end time
+      var yScale = d3.scaleTime()
         .domain([parseTime(start_time), parseTime(end_time)])
         .range([0, height]);
 
-        // Default y coordinate for the timeline horizontal line
-        const default_timeline_y = yScale(parseTime(default_timeline_time));
+      // Default y coordinate for the timeline horizontal line
+      const default_timeline_y = yScale(parseTime(default_timeline_time));
 
-        // Create x axis using long ticks as vertical stop lines.
-        // Remove the 'deduplicator' at the end of the stop in the axis labels if present
-        var xAxis = d3.axisTop(xScale)
+      // Create x axis using long ticks as vertical stop lines.
+      // Remove the 'deduplicator' at the end of the stop in the axis labels if present
+      var xAxis = d3.axisTop(xScale)
         .tickSize(-height)
         .tickFormat(realStopName);
 
-        // Create left y axis
-        var yLeftAxis = d3.axisLeft(yScale)
+      // Create left y axis
+      var yLeftAxis = d3.axisLeft(yScale)
         .ticks(d3.timeMinute.every(yaxis_minutes_interval))
         .tickFormat(formatAxisTime);
 
-        // Create right y axis
-        var yRightAxis = d3.axisRight(yScale)
+      // Create right y axis
+      var yRightAxis = d3.axisRight(yScale)
         .ticks(d3.timeMinute.every(yaxis_minutes_interval))
         .tickFormat(formatAxisTime);
 
-        // Line generator for the path representing a trip
-        var line = d3.line()
-        .x(function(d) { return xScale(d.stop); })
-        .y(function(d) { return yScale(parseTime(d.time)); });
+      // Line generator for the path representing a trip
+      var line = d3.line()
+        .x(function(d) {
+          return xScale(d.stop);
+        })
+        .y(function(d) {
+          return yScale(parseTime(d.time));
+        });
 
-        // Draw the top x axis
-        svg.append('g')
-            .attr('class', 'x axis')
-            .call(xAxis)
-            .selectAll('text')
-            .attr('y', 0)
-            .attr('x', 9)
-            .attr('dy', '.35em');
+      // Draw the top x axis
+      svg.append('g')
+        .attr('class', 'x axis')
+        .call(xAxis)
+        .selectAll('text')
+        .attr('y', 0)
+        .attr('x', 9)
+        .attr('dy', '.35em');
 
-        // Draw left y axis
-        svg.append('g')
-            .attr('class', 'y left axis')
-            .call(yLeftAxis);
+      // Draw left y axis
+      svg.append('g')
+        .attr('class', 'y left axis')
+        .call(yLeftAxis);
 
-        // Draw right y axis
-        svg.append('g')
-            .attr('class', 'y right axis')
-            .attr('transform', `translate(${width},0)`)
-            .call(yRightAxis);
+      // Draw right y axis
+      svg.append('g')
+        .attr('class', 'y right axis')
+        .attr('transform', `translate(${width},0)`)
+        .call(yRightAxis);
 
-        // Timeline group
-        var timeline = svg.append('g')
+      // Timeline group
+      var timeline = svg.append('g')
         .attr('class', 'timeline')
         .attr('transform', `translate(0,${default_timeline_y})`);
 
-        // Timeline horizontal line
-        timeline.append('line')
-            .attr('class', 'timeline')
-            .attr('x1', 0)
-            .attr('x2', width);
+      // Timeline horizontal line
+      timeline.append('line')
+        .attr('class', 'timeline')
+        .attr('x1', 0)
+        .attr('x2', width);
 
-        // Timeline tooltip showing the time
-        timeline.append('text')
-            .text(default_timeline_time)
-            .attr('x', '5')
-            .attr('y', '-5');
+      // Timeline tooltip showing the time
+      timeline.append('text')
+        .text(default_timeline_time)
+        .attr('x', '5')
+        .attr('y', '-5');
 
-        // Handle the mouse movement changing the timeline position
-        function handleMouseMove() {
-            var overlay = document.getElementById('overlay');
+      // Handle the mouse movement changing the timeline position
+      function handleMouseMove() {
+        var overlay = document.getElementById('overlay');
 
-            // Get the mouse position relative to the overlay
-            var yPos = d3.mouse(overlay)[1];
-            // Keep an upper border for the timeline
-            yPos = yPos < default_timeline_y ? default_timeline_y : yPos;
-            // Get the time corresponding to the actual mouse position
-            // and format it
-            var time = yScale.invert(yPos) ,
-                formattedTime = formatTimelineTime(time);
-            Map.renderMapAtTime(time);
+        // Get the mouse position relative to the overlay
+        var yPos = d3.mouse(overlay)[1];
+        // Keep an upper border for the timeline
+        yPos = yPos < default_timeline_y ? default_timeline_y : yPos;
+        // Get the time corresponding to the actual mouse position
+        // and format it
+        var time = yScale.invert(yPos),
+          formattedTime = formatTimelineTime(time);
+        Map.renderMapAtTime(time);
 
-            // Update the y position of the timeline group
-            d3.select('g.timeline').attr('transform', `translate(0,${yPos})`);
-            // Update the text showing the time
-            d3.select('g.timeline text').text(formattedTime);
-        }
+        // Update the y position of the timeline group
+        d3.select('g.timeline').attr('transform', `translate(0,${yPos})`);
+        // Update the text showing the time
+        d3.select('g.timeline text').text(formattedTime);
+      }
 
-        // Overlay used to register mouse movements
-        svg.append('rect')
-            .attr('id', 'overlay')
-            .attr('width', width)
-            .attr('height', height)
-            .on('mousemove', handleMouseMove);
+      // Overlay used to register mouse movements
+      svg.append('rect')
+        .attr('id', 'overlay')
+        .attr('width', width)
+        .attr('height', height)
+        .on('mousemove', handleMouseMove);
 
-        // Create the group containing all the train trips
-        var trains = svg.append('g')
+      // Create the group containing all the train trips
+      var trains = svg.append('g')
         .attr('class', 'trip train')
         .attr('clip-path', 'url(#clip)')
         .selectAll('g')
         .data(trainsData)
         .enter().append('g');
 
-        // Plot the part of the train trips to the left
-        trains.append('path')
-            .attr('d', (t) =>
-                  line(t.stops
-                       // Of all the stops in the trip, we only consider those
-                       // that are on the left of the graph
-                       .filter(s => stops[0].indexOf(s.stop) !== -1)
-                       // Then we add the 'deduplicator' for the left stops ('|A')
-                       // to the stop names
-                       .map(s => ({'time': s.realtime, 'stop': s.stop + '|A'})))
-                 )
-            .attr('data-trip-id', (t) => t.trip_id);
-
-        // Plot the part of the train trips to the right
-        trains.append('path')
-            .attr('d', (t) =>
-                  line(t.stops
-                       .filter(s => stops[2].indexOf(s.stop) !== -1)
-                       .map(s => ({'time': s.realtime, 'stop': s.stop + '|B'})))
-                 )
-            .attr('data-trip-id', (t) => t.trip_id);
-
-        // Draw the circles corresponding to the train stops
-        trains.selectAll('circle')
-            .data((t) => {
-            // For each trip, we need to add the deduplicator to the
-            // stop names so that xScale knows what we're talking about
-            var leftStops = t.stops
+      // Plot the part of the train trips to the left
+      trains.append('path')
+        .attr('d', (t) =>
+          line(t.stops
+            // Of all the stops in the trip, we only consider those
+            // that are on the left of the graph
             .filter(s => stops[0].indexOf(s.stop) !== -1)
-            .map(s => ({'trip_id': t.trip_id, 'time': s.realtime, 'stop': s.stop + '|A'}));
-            var rightStops = t.stops
-            .filter(s => stops[2].indexOf(s.stop) !== -1)
-            .map(s => ({'trip_id': t.trip_id, 'time': s.realtime, 'stop': s.stop + '|B'}));
-            return leftStops.concat(rightStops);
-        })
-            .enter().append('circle')
-            .attr('transform', (d) => `translate(${xScale(d.stop)},${yScale(parseTime(d.time))})`)
-            .attr('r', default_circle_radius)
-            .attr('data-trip-id', (t) => t.trip_id);
+            // Then we add the 'deduplicator' for the left stops ('|A')
+            // to the stop names
+            .map(s => ({
+              'time': (userinput === hoffe) ? s.realtime : s.time,
+              'stop': s.stop + '|A'
+            })))
+        )
+        .attr('data-trip-id', (t) => t.trip_id);
 
-        // Create groups containing the bus trips
-        var buses = svg.append('g')
+      // Plot the part of the train trips to the right
+      trains.append('path')
+        .attr('d', (t) =>
+          line(t.stops
+            .filter(s => stops[2].indexOf(s.stop) !== -1)
+            .map(s => ({
+              'time': (userinput === hoffe) ? s.realtime : s.time,
+              'stop': s.stop + '|B'
+            })))
+        )
+        .attr('data-trip-id', (t) => t.trip_id);
+
+      // Draw the circles corresponding to the train stops
+      trains.selectAll('circle')
+        .data((t) => {
+          // For each trip, we need to add the deduplicator to the
+          // stop names so that xScale knows what we're talking about
+          var leftStops = t.stops
+            .filter(s => stops[0].indexOf(s.stop) !== -1)
+            .map(s => ({
+              'trip_id': t.trip_id,
+              'time': (userinput === hoffe) ? s.realtime : s.time,
+              'stop': s.stop + '|A'
+            }));
+          var rightStops = t.stops
+            .filter(s => stops[2].indexOf(s.stop) !== -1)
+            .map(s => ({
+              'trip_id': t.trip_id,
+              'time': (userinput === hoffe) ? s.realtime : s.time,
+              'stop': s.stop + '|B'
+            }));
+          return leftStops.concat(rightStops);
+        })
+        .enter().append('circle')
+        .attr('transform', (d) => `translate(${xScale(d.stop)},${yScale(parseTime(d.time))})`)
+        .attr('r', default_circle_radius)
+        .attr('data-trip-id', (t) => t.trip_id);
+
+      // Create groups containing the bus trips
+      var buses = svg.append('g')
         .attr('class', 'trip bus')
         .attr('clip-path', 'url(#clip)')
         .selectAll('g')
         .data(busData)
         .enter().append('g');
 
-        // Draw the bus trip paths on the left, adding the type of the trip as a class
-        buses.append('path')
-            .attr('d', (t) => line(t.stops.map(s => ({'time': s.time, 'stop': deduplicatedBusStop(s.stop, 'A')}))))
-            .attr('class', (t) => t.type)
-            .attr('data-trip-id', (t) => t.trip_id);
+      // Draw the bus trip paths on the left, adding the type of the trip as a class
+      buses.append('path')
+        .attr('d', (t) => line(t.stops.map(s => ({
+          'time': s.time,
+          'stop': deduplicatedBusStop(s.stop, 'A')
+        }))))
+        .attr('class', (t) => t.type)
+        .attr('data-trip-id', (t) => t.trip_id);
 
-        // Draw the bus trip paths on the right, adding the type of the trip as a class
-        buses.append('path')
-            .attr('d', (t) => line(t.stops.map(s => ({'time': s.time, 'stop': deduplicatedBusStop(s.stop, 'B')}))))
-            .attr('class', (t) => t.type)
-            .attr('data-trip-id', (t) => t.trip_id);
+      // Draw the bus trip paths on the right, adding the type of the trip as a class
+      buses.append('path')
+        .attr('d', (t) => line(t.stops.map(s => ({
+          'time': s.time,
+          'stop': deduplicatedBusStop(s.stop, 'B')
+        }))))
+        .attr('class', (t) => t.type)
+        .attr('data-trip-id', (t) => t.trip_id);
 
-        // Draw the circles representing the stops in a bus trip
-        buses.selectAll('circle')
-            .data((t) => {
-            // Add deduplicator to the stops on the left and right then merge them
-            var leftStops = t.stops.map(s => ({'trip_id': t.trip_id, 'type': t.type, 'time': s.time, 'stop': deduplicatedBusStop(s.stop, 'A')}));
-            var rightStops = t.stops.map(s => ({'trip_id': t.trip_id, 'type': t.type, 'time': s.time, 'stop': deduplicatedBusStop(s.stop, 'B')}));
-            return leftStops.concat(rightStops);
+      // Draw the circles representing the stops in a bus trip
+      buses.selectAll('circle')
+        .data((t) => {
+          // Add deduplicator to the stops on the left and right then merge them
+          var leftStops = t.stops.map(s => ({
+            'trip_id': t.trip_id,
+            'type': t.type,
+            'time': s.time,
+            'stop': deduplicatedBusStop(s.stop, 'A')
+          }));
+          var rightStops = t.stops.map(s => ({
+            'trip_id': t.trip_id,
+            'type': t.type,
+            'time': s.time,
+            'stop': deduplicatedBusStop(s.stop, 'B')
+          }));
+          return leftStops.concat(rightStops);
         })
-            .enter().append('circle')
-            .attr('transform', (d) => `translate(${xScale(d.stop)},${yScale(parseTime(d.time))})`)
-            .attr('class', (t) => t.type)
-            .attr('r', default_circle_radius)
-            .attr('data-trip-id', (t) => t.trip_id);
+        .enter().append('circle')
+        .attr('transform', (d) => `translate(${xScale(d.stop)},${yScale(parseTime(d.time))})`)
+        .attr('class', (t) => t.type)
+        .attr('r', default_circle_radius)
+        .attr('data-trip-id', (t) => t.trip_id);
 
-        // Attach the trip mouseover and mouseout handlers to all the
-        // paths and circles of the trips
-        svg.selectAll('.trip path, .trip circle')
-            .on('mouseover', (trip) => tripMouseOver(trip.trip_id))
-            .on('mouseout', (trip) => tripMouseOut(trip.trip_id));
-    }());
-});
+      // Attach the trip mouseover and mouseout handlers to all the
+      // paths and circles of the trips
+      svg.selectAll('.trip path, .trip circle')
+        .on('mouseover', (trip) => tripMouseOver(trip.trip_id))
+        .on('mouseout', (trip) => tripMouseOut(trip.trip_id));
+    };
+    test("realtime", "realtime");
+    document.addEventListener('communication', function(event) {
+      var userinput = event.detail;
+      document.getElementById('marey').remove();
+      test(userinput, "realtime");
+    });
+
+  });

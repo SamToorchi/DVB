@@ -3,6 +3,10 @@ svg {
   font: 10px sans-serif;
 }
 
+#marey {
+  margin-top: 11vh;
+}
+
 /* Vertical lines representing the stops in Marey and axes in the map */
 #marey .x.axis line, #map .bus.axis path, #map .train.axis path {
   stroke: lightgray;
@@ -28,20 +32,42 @@ svg {
 }
 
 /* Apply white border to the circles representing a stop in a trip in Marey */
-#marey .trip circle { stroke: #fff; }
+#marey .trip circle {
+  stroke: #fff;
+}
 
 /* Use different colors to represent trains and buses (3 kinds) in Marey and Map */
-#marey .trip.train path                        { stroke: #303F9F; }
-#marey .trip.train circle, #map .trains circle { fill:   #303F9F; }
+#marey .trip.train path {
+  stroke: #303F9F;
+}
 
-#marey .trip path.vtn69                             { stroke: #689F38; }
-#marey .trip circle.vtn69, #map .buses circle.vtn69 { fill:   #689F38; }
+#marey .trip.train circle, #map .trains circle {
+  fill: #303F9F;
+}
 
-#marey .trip path.ret40                             { stroke: #FFC107; }
-#marey .trip circle.ret40, #map .buses circle.ret40 { fill:   #FFC107; }
+#marey .trip path.vtn69 {
+  stroke: #689F38;
+}
 
-#marey .trip path.ret174                              { stroke: #FF5722; }
-#marey .trip circle.ret174, #map .buses circle.ret174 { fill:   #FF5722; }
+#marey .trip circle.vtn69, #map .buses circle.vtn69 {
+  fill: #689F38;
+}
+
+#marey .trip path.ret40 {
+  stroke: #FFC107;
+}
+
+#marey .trip circle.ret40, #map .buses circle.ret40 {
+  fill: #FFC107;
+}
+
+#marey .trip path.ret174 {
+  stroke: #FF5722;
+}
+
+#marey .trip circle.ret174, #map .buses circle.ret174 {
+  fill: #FF5722;
+}
 
 /* Horizontal timeline line in Marey */
 #marey .timeline line {
@@ -76,4 +102,112 @@ svg {
 #map {
   position: fixed;
   top: 50%;
+}
+
+label.btn span {
+  font: sans-serif 3em;
+}
+
+label input[type="radio"]~i.fa.fa-circle-o {
+  color: #c8c8c8;
+  display: inline;
+}
+
+label input[type="radio"]~i.fa.fa-dot-circle-o {
+  display: none;
+}
+
+label input[type="radio"]:checked~i.fa.fa-circle-o {
+  display: none;
+}
+
+label input[type="radio"]:checked~i.fa.fa-dot-circle-o {
+  color: #7AA3CC;
+  display: inline;
+}
+
+label:hover input[type="radio"]~i.fa {
+  color: #7AA3CC;
+}
+
+label input[type="checkbox"]~i.fa.fa-square-o {
+  color: #c8c8c8;
+  display: inline;
+}
+
+label input[type="checkbox"]~i.fa.fa-check-square-o {
+  display: none;
+}
+
+label input[type="checkbox"]:checked~i.fa.fa-square-o {
+  display: none;
+}
+
+label input[type="checkbox"]:checked~i.fa.fa-check-square-o {
+  color: #7AA3CC;
+  display: inline;
+}
+
+label:hover input[type="checkbox"]~i.fa {
+  color: #7AA3CC;
+}
+
+div[data-toggle="buttons"] label.active {
+  color: #7AA3CC;
+}
+
+div[data-toggle="buttons"] label {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 2em;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: top;
+  cursor: pointer;
+  background-color: none;
+  border: 0px solid #c8c8c8;
+  border-radius: 3px;
+  color: #c8c8c8;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+div[data-toggle="buttons"] label:hover {
+  color: #7AA3CC;
+}
+
+div[data-toggle="buttons"] label:active, div[data-toggle="buttons"] label.active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.form-submit-button {
+  background: #B9E006;
+  color: #fff;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eee;
+  text-shadow: none;
+  margin-left: 20vw;
+}
+
+.form-submit-button:hover {
+  background: #016B06;
+  color: #fff;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eee;
+  text-shadow: none;
+  margin-left: 20vw;
+}
+
+.legende{
+  position: absolute;
+  right:10%;
+  top:0px;
 }
