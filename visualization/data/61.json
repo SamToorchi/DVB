@@ -635,17 +635,17 @@
       {
         "stop": "TU Dresden",
         "time": "07:09:00",
-        "realtime": "07:10:00"
+        "realtime": "07:12:00"
       },
       {
         "stop": "Nürnberger Platz",
         "time": "07:11:00",
-        "realtime": "07:12:00"
+        "realtime": "07:13:00"
       },
       {
         "stop": "Bernhardstraße",
         "time": "07:13:00",
-        "realtime": "07:14:00"
+        "realtime": "07:15:00"
       },
       {
         "stop": "Chemnitzer Straße",
@@ -6282,7 +6282,7 @@
       {
         "stop": "Zellescher Weg",
         "time": "10:40:00",
-        "realtime":"10:30:00"
+        "realtime":"10:40:00"
       },
       {
         "stop": "C.-D.-Friedrich Straße",

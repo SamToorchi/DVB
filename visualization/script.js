@@ -617,7 +617,25 @@ d3.queue()
               'stop': s.stop + '|A'
             })))
         )
-        .attr('data-trip-id', (t) => t.trip_id);
+        .attr('data-trip-id', (t) => t.trip_id)
+        .attr('stroke', 'red' );
+
+        // Plot the part of the train trips to the left for U
+        trains.append('path')
+          .attr('d', (t) =>
+            line(t.stops
+              // Of all the stops in the trip, we only consider those
+              // that are on the left of the graph
+              .filter(s => stops[0].indexOf(s.stop) !== -1)
+              // Then we add the 'deduplicator' for the left stops ('|A')
+              // to the stop names
+              .map(s => ({
+                'time': (userinput === hoffe) ? s.time : s.realtime,
+                'stop': s.stop + '|A'
+              })))
+          )
+          .attr('data-trip-id', (t) => t.trip_id)
+          .attr('stroke', '#303F9F');
 
       // Plot the part of the train trips to the right
       trains.append('path')
@@ -629,7 +647,22 @@ d3.queue()
               'stop': s.stop + '|B'
             })))
         )
-        .attr('data-trip-id', (t) => t.trip_id);
+        .attr('data-trip-id', (t) => t.trip_id)
+        .attr('stroke', 'red');
+
+        // Plot the part of the train trips to the right for U
+        trains.append('path')
+        .attr('stroke', '#303F9F')
+          .attr('d', (t) =>
+            line(t.stops
+              .filter(s => stops[2].indexOf(s.stop) !== -1)
+              .map(s => ({
+                'time': (userinput === hoffe) ? s.time : s.realtime,
+                'stop': s.stop + '|B'
+              })))
+          )
+          .attr('data-trip-id', (t) => t.trip_id)
+          ;
 
       // Draw the circles corresponding to the train stops
       trains.selectAll('circle')
@@ -641,21 +674,47 @@ d3.queue()
             .map(s => ({
               'trip_id': t.trip_id,
               'time': (userinput === hoffe) ? s.realtime : s.time,
-              'stop': s.stop + '|A'
+              'stop': s.stop + '|A',
+              'realOrNot' : 'real',
+              'color' : 'red'
+            }));
+          var leftStopsU = t.stops
+            .filter(s => stops[0].indexOf(s.stop) !== -1)
+            .map(s => ({
+              'trip_id': t.trip_id,
+              'time': (userinput === hoffe) ? s.time : s.realtime,
+              'stop': s.stop + '|A',
+              'realOrNot' : 'not',
+              'color' : '#303F9F'
             }));
           var rightStops = t.stops
             .filter(s => stops[2].indexOf(s.stop) !== -1)
             .map(s => ({
               'trip_id': t.trip_id,
               'time': (userinput === hoffe) ? s.realtime : s.time,
-              'stop': s.stop + '|B'
+              'stop': s.stop + '|B',
+              'realOrNot': 'real',
+              'color': 'red'
             }));
-          return leftStops.concat(rightStops);
+          var rightStopsU = t.stops
+            .filter(s => stops[2].indexOf(s.stop) !== -1)
+            .map(s => ({
+              'trip_id': t.trip_id,
+              'time': (userinput === hoffe) ? s.time : s.realtime,
+              'stop': s.stop + '|B',
+              'realOrNot': 'not',
+              'color' : '#303F9F'
+            }));
+          return leftStops.concat(rightStops, leftStopsU, rightStopsU);
         })
+
         .enter().append('circle')
         .attr('transform', (d) => `translate(${xScale(d.stop)},${yScale(parseTime(d.time))})`)
         .attr('r', default_circle_radius)
+        .attr('fill', (d) => d.color)
+        .attr('realOrNot', (d) => d.realOrNot)
         .attr('data-trip-id', (t) => t.trip_id);
+
 
       // Create groups containing the bus trips
       var buses = svg.append('g')
