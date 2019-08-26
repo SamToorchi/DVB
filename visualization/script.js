@@ -88,7 +88,7 @@ d3.queue()
       // D3 margin convention
       var margin = {
           top: 120,
-          right: 20,
+          right: 30,
           bottom: 20,
           left: 120
         },
@@ -101,9 +101,45 @@ d3.queue()
         .style('margin-top', `-${map_height/2}px`)
         .style('left', `${marey_width}px`)
         .attr('width', width + margin.left + margin.right)
-        .attr('height', height + margin.top + margin.bottom)
+        .attr('height', height + margin.top + margin.bottom + 100)
         .append('g')
         .attr('transform', `translate(${margin.left},${margin.top})`);
+
+        triangles = [];
+        triangles.push({
+          x: 25,
+          y: -70,
+          rotate: 180
+        });
+        triangles.push({
+          x: -25,
+          y: height +30 ,
+          rotate: 0
+        });
+        triangles.push({
+          x: 25,
+          y: height * 0.55,
+          rotate: 90
+        });
+        triangles.push({
+          x: width + 18,
+          y: height - width/1.5,
+          rotate: 270
+        });
+
+        var arc = d3.symbol().type(d3.symbolTriangle);
+
+        var line = svg.selectAll('path')
+          .data(triangles)
+          .enter()
+          .append('path')
+          .attr('d', arc)
+          .attr('fill', 'black')
+          .attr('stroke', 'black')
+          .attr('stroke-width', 2)
+          .attr('transform', function(d) {
+            return "translate(" + d.x + "," + d.y + ") rotate(" + d.rotate + ")";
+          });
 
       // Scale for the the bus (y) axis (--> Map)
       var busScale = d3.scalePoint()
@@ -383,6 +419,8 @@ d3.queue()
 
         // Exit event for the bus trips
         buses.exit().remove();
+
+
 
         // Attach the trip mouseover and mouseout handlers to all the
         // circles representing the vehichles
