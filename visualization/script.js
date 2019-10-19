@@ -1,7 +1,6 @@
 /* jshint esversion: 6 */
 
 
-
 // Dynamic width of Marey (left side Visualization) and Map (right side Visualization)
 const window_width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
       window_height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight,
@@ -520,7 +519,7 @@ d3.queue()
             height = marey_height - margin.top - margin.bottom;
 
         // Create main SVG element applying the margins
-        var svg = d3.select('body').append('svg')
+        var svg = d3.select('#mareydiv').append('svg')
         .attr('id', 'marey')
         .attr('width', width + margin.left + margin.right)
         .attr('height', height + margin.top + margin.bottom)
@@ -542,14 +541,11 @@ d3.queue()
         var minUnixSecondsCordinate = Math.floor(new Date(minUnixSeconds)/1000.0);
         var maxUnixSecondsCordinate = Math.floor(new Date(maxUnixSeconds)/1000.0);
 
-        console.log(minUnixSeconds);
-        console.log(maxUnixSecondsCordinate);
-        console.log(minUnixSecondsCordinate);
 
         /*tiny */
 
         var tinyMargin = {top: 0, right: 0, bottom: 0, left: 0};
-        var tinyOuterWidth = 80, tinyOuterHeight = 800;
+        var tinyOuterWidth = 80, tinyOuterHeight = 600;
         var tinyWidth = tinyOuterWidth - tinyMargin.left - tinyMargin.right,
             tinyHeight = tinyOuterHeight - tinyMargin.top - tinyMargin.bottom;
 
@@ -664,6 +660,10 @@ d3.queue()
             d3.select('g.timeline').attr('transform', `translate(0,${yPos})`);
             // Update the text showing the time
             d3.select('g.timeline text').text(formattedTime);
+            /*
+            var tinyY = tinyyScale(time);
+            tinyBar.attr('transform', 'translate(0,' + tinyY + ')');
+            */
         }
 
         // Overlay used to register mouse movements
@@ -924,30 +924,16 @@ d3.queue()
             .on('mouseout', (trip) => tripMouseOut(trip.trip_id));
 
 
-        var tinyBar = tinySvg.append('g');
-        tinyBar.append('line')
-            .attr('class', 'bar')
-            .attr('x1', 0)
-            .attr('x2', width)
-            .attr('y1', 0)
-            .attr('y2', 0);
 
-        function select(time) {
-            var y = yScale(time);
-            bar.attr('transform', 'translate(0,' + y + ')');
-            timeDisplay.text(moment(time * 1000).format('h:mm a'));
-            var tinyY = tinyyScale(time);
-            tinyBar.attr('transform', 'translate(0,' + tinyY + ')');
-            window.render(time);
-        }
+        d3.select("#marey").on('scroll', setScrollBox);
+        d3.select("#tinymarey").on('click', setScroll);
 
-        /*
+
         var scrollToTinyScale = d3.scaleLinear()
-        .domain([0, outerHeight])
+        .domain([0, 15500])
         .range([0, tinyOuterHeight]);
 
-
-        var scroll = tinySvg.append('rect')
+        var scroll = d3.select('#tinymarey').select('.tiny').append('rect')
         .attr('class', 'scroll')
         .attr('x', 0)
         .attr('y', 0)
@@ -957,17 +943,24 @@ d3.queue()
         function setScrollBox() {
             var top = d3.select("#marey").node().scrollTop;
             scroll.attr('y', scrollToTinyScale(top));
-        }
-        function setScroll() {
-            var pos = d3.mouse(tinySvg.node());
-            var y = pos[1];
-            var scrollPos = Math.max(scrollToTinyScale.invert(y) - tinyOuterHeight / 2, 0);
-            d3.select("#marey").node().scrollTop = scrollPos;
-            d3.event.stopPropagation();
-        }
-        */
 
-        d3.select("#tinymarey").on('click', setScroll);
+        }
+
+        function setScroll() {
+            /* calculate click position relative to tinyMarey */
+            var pos = d3.mouse(tinySvg.node());
+            /*get y value */
+            var y = pos[1];
+            /*calculate height position of main marey **/
+            var scrollPos = Math.max(scrollToTinyScale.invert(y) - tinyOuterHeight / 2, 0);
+            document.getElementById('mareydiv').scrollTo(0, scrollPos);
+            d3.select('.scroll').attr('y', y);
+            d3.event.stopPropagation();
+            
+        }
+
+        setScrollBox();
+
 
     };
     test("realtime", "realtime");
