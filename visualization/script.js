@@ -685,6 +685,18 @@ d3.queue()
         .enter()
         .append('g');
 
+        var tinySvgBus = d3.select('#tinymarey').append('svg')
+        .attr('class', 'tinyBus')
+        .attr('clip-path', 'url(#clip)')
+        .attr('width', tinyOuterWidth)
+        .attr('height', tinyOuterHeight)
+        .append('g')
+        .attr('transform', 'translate(' + tinyMargin.left + ', ' + tinyMargin.top + ')')
+        .selectAll('g')
+        .data(busData)
+        .enter()
+        .append('g');
+
         tinySvg.append('path')
             .attr('d', (t) =>
                   TinyLine(t.stops
@@ -728,7 +740,8 @@ d3.queue()
         })))
                  )
             .attr('data-trip-id', (t) => t.trip_id)
-            .attr('stroke', 'red');
+            .attr('stroke', 'red')
+        ;
 
         // Plot the part of the train trips to the right for U
         tinySvg.append('path')
@@ -741,6 +754,16 @@ d3.queue()
             'stop': s.stop + '|B'
         })))
                  )
+            .attr('data-trip-id', (t) => t.trip_id)
+        ;
+
+        // Draw the bus trip paths on the left, adding the type of the trip as a class
+        tinySvgBus.append('path')
+            .attr('d', (t) => TinyLine(t.stops.map(s => ({
+            'time': s.time,
+            'stop': deduplicatedBusStop(s.stop, 'A')
+        }))))
+            .attr('class', (t) => t.type)
             .attr('data-trip-id', (t) => t.trip_id)
         ;
 
@@ -882,7 +905,8 @@ d3.queue()
             'stop': deduplicatedBusStop(s.stop, 'A')
         }))))
             .attr('class', (t) => t.type)
-            .attr('data-trip-id', (t) => t.trip_id);
+            .attr('data-trip-id', (t) => t.trip_id)
+        ;
 
         // Draw the bus trip paths on the right, adding the type of the trip as a class
         buses.append('path')
@@ -927,6 +951,7 @@ d3.queue()
 
         d3.select("#marey").on('scroll', setScrollBox);
         d3.select("#tinymarey").on('click', setScroll);
+        d3.select("#mareydiv").on('scroll', setBlackBoxPosition);
 
 
         var scrollToTinyScale = d3.scaleLinear()
@@ -938,11 +963,11 @@ d3.queue()
         .attr('x', 0)
         .attr('y', 0)
         .attr('width', tinyOuterWidth)
-        .attr('height', scrollToTinyScale(tinyOuterHeight));
+        .attr('height', scrollToTinyScale(tinyOuterHeight-200));
 
-        function setScrollBox() {
-            var top = d3.select("#marey").node().scrollTop;
-            scroll.attr('y', scrollToTinyScale(top));
+        function setScrollBox(pos) {
+            var top = document.getElementById('mareydiv').scrollTop;
+            scroll.attr('y', scrollToTinyScale(pos));
 
         }
 
@@ -956,10 +981,18 @@ d3.queue()
             document.getElementById('mareydiv').scrollTo(0, scrollPos);
             d3.select('.scroll').attr('y', y);
             d3.event.stopPropagation();
-            
+
+        }
+        
+        function setBlackBoxPosition() {
+            /* get Scrollposition of Marey Diagram */
+            var pos = document.getElementById('mareydiv').scrollTop;
+            document.getElementById('mareydiv').scrollTop = pos;
+            setScrollBox(pos);
+            d3.event.stopPropagation();
         }
 
-        setScrollBox();
+        setScrollBox(0);
 
 
     };

@@ -2,6 +2,15 @@
 svg {
   font: 10px sans-serif;
 }
+.scroll{
+    fill: rgba(0, 0, 0, 0.36);
+}
+
+.tinyBus{
+    z-index:999;
+    transform: translate(-70px, 0px) scaleX(1.6);
+}
+
 
 #mareydiv {
   margin-top: 11vh;
