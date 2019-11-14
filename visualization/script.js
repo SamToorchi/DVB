@@ -53,7 +53,45 @@ d3.queue()
         type: 'ret174'
     }));
 
+    var timeDifference = [];
+    //console.log(trainsData);
+    for (var i = 0; i < trainsData.length; i++){
+        for (var j = 0; j < trainsData[i].stops.length; j ++){
+            //console.log('erste Schleife');
+            //console.log('zweite Schleife');
+            var start = trainsData[i].stops[j].time;
+            var end = trainsData[i].stops[j].realtime;
 
+            start = start.split(":");
+            end = end.split(":");
+
+            var startDate = new Date(0, 0, 0, start[0], start[1], start[2]);
+            var endDate = new Date(0, 0, 0, end[0], end[1], end[2]);
+
+            var diff = endDate.getTime() - startDate.getTime();
+
+            var hours = Math.floor(diff / 1000 / 60 / 60);
+            diff -= hours * 1000 * 60 * 60;
+            var minutes = Math.floor(diff / 1000 / 60);
+
+            if (hours < 0){
+                hours = hours + 24;
+            }
+            timeDifference = [{diff_minute: minutes, diff_hour: hours}];
+            
+            var testOne = trainsData[i].stops[j];
+            //console.log(trainsData[i].trip_id);
+            //testOne.set([{"name": minutes}]);
+           
+            trainsData[i].stops[j]['diff_minute'] = minutes;
+            trainsData[i].stops[j]['diff_hour'] = hours;
+            
+
+
+        }
+
+    }
+    console.log(trainsData);
 
     // Concatenate all bus data in a single array
     var busData = vtn69Data.concat(ret40Data, ret174Data);
@@ -955,7 +993,7 @@ d3.queue()
 
 
         var scrollToTinyScale = d3.scaleLinear()
-        .domain([0, 15500])
+        .domain([0, 16000])
         .range([0, tinyOuterHeight]);
 
         var scroll = d3.select('#tinymarey').select('.tiny').append('rect')
@@ -983,7 +1021,7 @@ d3.queue()
             d3.event.stopPropagation();
 
         }
-        
+
         function setBlackBoxPosition() {
             /* get Scrollposition of Marey Diagram */
             var pos = document.getElementById('mareydiv').scrollTop;

@@ -18,6 +18,7 @@ svg {
     position: relative;
     overflow: scroll;
     overflow-y: scroll;
+    transform: translateY(-250px);
 }
 
 /* Vertical lines representing the stops in Marey and axes in the map */
