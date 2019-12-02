@@ -287,7 +287,7 @@ d3.queue()
 
             // Given a list of stops and a scale, computes the position
             // of the vehicle
-            function getPosition(tripStopList, scale) {
+            function getPosition(tripStopList, scale) { 
 
 
 
