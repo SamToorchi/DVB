@@ -11,6 +11,10 @@ svg {
     transform: translate(-70px, 0px) scaleX(1.6);
 }
 
+#barchart{
+    transform: translate(60px, 60px);
+}
+
 
 #mareydiv {
   margin-top: 11vh;
