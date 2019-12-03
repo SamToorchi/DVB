@@ -64,6 +64,7 @@ d3.queue()
 
                 start = start.split(":");
                 end = end.split(":");
+                
 
                 var startDate = new Date(0, 0, 0, start[0], start[1], start[2]);
                 var endDate = new Date(0, 0, 0, end[0], end[1], end[2]);
@@ -75,14 +76,14 @@ d3.queue()
                 var minutes = Math.floor(diff / 1000 / 60);
 
                 if (hours < 0) {
-                    hours = 30;
+                    hours = hours + 1;
                 }
                 
                 if (minutes == 59) {
-                    minutes = -1;
+                    minutes = 0;
                 }
                 if (minutes == 58) {
-                    minutes = -2;
+                    minutes = 0;
                 }
                 timeDifference = [{
                     diff_minute: minutes,
@@ -95,6 +96,8 @@ d3.queue()
 
                 trainsData[i].stops[j]['diff_minute'] = minutes;
                 trainsData[i].stops[j]['diff_hour'] = hours;
+                trainsData[i].stops[j]['time_category'] = start[0];
+                
             }
 
         }
@@ -735,7 +738,7 @@ d3.queue()
                 .attr('width', widthBarchart)
                 .attr('height', heightBarchart)
                 .append('g')
-                .attr('transform', `translate(160 ${marginBarchart}) rotate(90 200 200)`);;
+                .attr('transform', `translate(160 ${marginBarchart}) `);;
 
             var yBarScale = d3.scaleLinear()
                 .range([heightBarchart, 0])
@@ -751,11 +754,11 @@ d3.queue()
                 }
             }
             console.log(easyAccessForLoop);
-            console.log(sampleAxis);
+            //console.log(sampleAxis);
 
             const xBarScale = d3.scaleBand()
                 .range([0, widthBarchart])
-                .domain(sampleAxis.map((t) => t.clock))
+                .domain(easyAccessForLoop.map((t) => t.time_category))
                 .padding(0.1)
 
             barchart.append('g')
@@ -763,15 +766,15 @@ d3.queue()
                 .call(d3.axisBottom(xBarScale));
 
             //var myDataForBarChart = [easyAccessForLoop, sampleAxis];
-            var myDataForBarChart = easyAccessForLoop.concat(sampleAxis);
-            console.log(myDataForBarChart);
+            //var myDataForBarChart = easyAccessForLoop.concat(sampleAxis);
+            //console.log(myDataForBarChart);
             barchart.selectAll()
-                .data(myDataForBarChart)
+                .data(easyAccessForLoop)
                 .enter()
                 .append('rect')
-                .attr('x', (t) => xBarScale(t.clock))
+                .attr('x', (t) => xBarScale(t.time_category))
                 .attr('y',(t) => yBarScale(t.diff_hour))
-                .attr('height', (t) => heightBarchart - yBarScale(t.diff_hour))
+                .attr('height', (t) => heightBarchart - yBarScale(t.diff_minute))
                 .attr('width', xBarScale.bandwidth())
 
 
