@@ -8952,7 +8952,28 @@
         "stop": "Nürnberger Platz",
         "time": "18:20:00",
         "realtime": "18:20:00"
+      },
+              {
+        "stop": "TU Dresden",
+        "time": "18:21:00",
+        "realtime": "18:20:00"
+      },
+      {
+        "stop": "SLUB",
+        "time": "18:22:00",
+        "realtime": "18:20:00"
+      },
+      {
+        "stop": "Zellescher Weg",
+        "time": "18:23:00",
+        "realtime": "18:20:00"
+      },
+      {
+        "stop": "C.-D.-Friedrich Straße",
+        "time": "18:25:00",
+        "realtime": "18:20:00"
       }
+              
     ]
   },
   {
