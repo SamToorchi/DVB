@@ -884,29 +884,7 @@ d3.queue()
                     }
                 }
             }
-            /*
-                        var f = new Array();
-                        f['x'] = 0;
-                        f['y'] = 0;
-                        f[1] = 0;
-                        f[2] = 0;
-                        f[3] = 0;
-                        f[4] = 0;
-                        f[5] = sumFive;
-                        f[6] = sumSix;
-                        f[7] = sumSeven;
-                        f[8] = sumEight;
-                        f[9] = sumNine;
-                        f[10] = sumTen;
-                        f[11] = sumEleven;
-                        f[12] = sumTwelve;
-                        f[13] = sumThirtheen;
-                        f[14] = sumFourtheen;
-                        f[15] = sumFiftheen;
-                        f[16] = sumSixtheen;
-
-                        console.log(f);
-            */
+            
             var BarChartDatas = [
                 {
                     x: 0,
@@ -1014,7 +992,6 @@ d3.queue()
                 }
             }
             console.log(easyAccessForLoop);
-            //console.log(sampleAxis);
 
             const xBarScale = d3.scaleBand()
                 .range([0, widthBarchart])
@@ -1025,9 +1002,6 @@ d3.queue()
                 .attr('transform', `translate(0, ${heightBarchart})`)
                 .call(d3.axisBottom(xBarScale));
 
-            //var myDataForBarChart = [easyAccessForLoop, sampleAxis];
-            //var myDataForBarChart = easyAccessForLoop.concat(sampleAxis);
-            //console.log(myDataForBarChart);
             barchart.selectAll()
                 .data(BarChartDatas)
                 .enter()
@@ -1037,7 +1011,7 @@ d3.queue()
                 .attr('height', (t) => heightBarchart - yBarScale(t.y))
                 .attr('width', xBarScale.bandwidth())
                 .attr("fill", function (d) {
-                    return d.diff_minute == 1 ? "#FF0033" : "#666666"
+                    return d.diff_minute == 0 ? "#FF0033" : "#666666"
                 });;
 
 
